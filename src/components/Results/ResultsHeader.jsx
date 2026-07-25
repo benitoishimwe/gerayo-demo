@@ -1,13 +1,15 @@
 import { AgencyPicker } from '../Search/AgencyPicker'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export function ResultsHeader({ origin, destination, onBack, agencyIds, setAgencyIds }) {
+  const { t } = useLanguage()
   return (
     <div className="flex-shrink-0 border-b border-gerayo-border p-4">
       <div className="flex flex-col gap-2">
         <button
           type="button"
           onClick={onBack}
-          aria-label="Back"
+          aria-label={t('common.back')}
           className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-gerayo-text hover:bg-gerayo-card transition"
         >
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" className="h-5 w-5">

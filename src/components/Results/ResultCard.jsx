@@ -1,5 +1,6 @@
 import agencies from '../../data/agencies.json'
 import seatMaps from '../../data/seatMaps.json'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function formatDuration(mins) {
   const h = Math.floor(mins / 60)
@@ -17,6 +18,7 @@ function addMinutes(time, mins) {
 }
 
 export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverStart, onHoverEnd, onOpenDetail }) {
+  const { t } = useLanguage()
   const agency = agencies.find((a) => a.id === route.agencyId)
   const bus = seatMaps[route.busType]
   const arrivalTime = addMinutes(route.departureTime, route.durationMins)
@@ -34,9 +36,9 @@ export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverSta
       }`}
     >
       <div className="grid grid-cols-3 items-center">
-        <div className="text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Departs</div>
-        <div className="text-center text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Time</div>
-        <div className="text-right text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Arrives</div>
+        <div className="text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.departs')}</div>
+        <div className="text-center text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.time')}</div>
+        <div className="text-right text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.arrives')}</div>
       </div>
 
       <div className="mt-1 grid grid-cols-3 items-center">
@@ -80,7 +82,7 @@ export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverSta
           }}
           className="rounded-full bg-gerayo-from px-4 py-2 text-sm font-semibold text-black transition hover:brightness-110"
         >
-          Buy ticket · {route.price.toLocaleString()} RWF
+          {t('results.buyTicket', { price: route.price.toLocaleString() })}
         </button>
       </div>
 

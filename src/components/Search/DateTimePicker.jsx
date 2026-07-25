@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
+import { useLanguage } from '../../i18n/LanguageContext'
 
-const WEEKDAYS = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
-const MONTHS = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
-]
+const WEEKDAY_KEYS = ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su']
 
 function pad(n) {
   return String(n).padStart(2, '0')
@@ -26,6 +23,7 @@ function startOfMonthGrid(year, month) {
 }
 
 export function DateTimePicker({ value, onChange }) {
+  const { t } = useLanguage()
   const [open, setOpen] = useState(false)
   const [mode, setMode] = useState('leave') // 'leave' | 'arrive'
   const [draft, setDraft] = useState(value)
@@ -111,7 +109,7 @@ export function DateTimePicker({ value, onChange }) {
             <div className="flex items-center justify-end px-3 py-1.5 flex-shrink-0">
               <button
                 onClick={() => setOpen(false)}
-                aria-label="Close"
+                aria-label={t('common.close')}
                 className="h-6 w-6 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
               >
                 ✕
@@ -128,7 +126,7 @@ export function DateTimePicker({ value, onChange }) {
                       mode === 'leave' ? 'bg-gerayo-border text-white' : 'text-gerayo-muted'
                     }`}
                   >
-                    Leave at
+                    {t('search.leaveAt')}
                   </button>
                   <button
                     type="button"
@@ -137,13 +135,13 @@ export function DateTimePicker({ value, onChange }) {
                       mode === 'arrive' ? 'bg-gerayo-border text-white' : 'text-gerayo-muted'
                     }`}
                   >
-                    Arrive by
+                    {t('search.arriveBy')}
                   </button>
                 </div>
                 <button
                   type="button"
                   onClick={resetToNow}
-                  aria-label="Reset to now"
+                  aria-label={t('search.resetToNow')}
                   className="h-8 w-8 flex-shrink-0 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
                 >
                   <svg className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -157,7 +155,7 @@ export function DateTimePicker({ value, onChange }) {
                   type="button"
                   onClick={() => changeMinutes(-1)}
                   className="h-7 w-7 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
-                  aria-label="Earlier"
+                  aria-label={t('search.earlier')}
                 >
                   ‹
                 </button>
@@ -168,7 +166,7 @@ export function DateTimePicker({ value, onChange }) {
                   type="button"
                   onClick={() => changeMinutes(1)}
                   className="h-7 w-7 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
-                  aria-label="Later"
+                  aria-label={t('search.later')}
                 >
                   ›
                 </button>
@@ -179,27 +177,27 @@ export function DateTimePicker({ value, onChange }) {
                   type="button"
                   onClick={() => changeMonth(-1)}
                   className="h-6 w-6 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
-                  aria-label="Previous month"
+                  aria-label={t('search.previousMonth')}
                 >
                   ‹
                 </button>
                 <span className="text-sm font-medium text-gerayo-text">
-                  {MONTHS[viewMonth]} {viewYear}
+                  {t(`search.months.${viewMonth + 1}`)} {viewYear}
                 </span>
                 <button
                   type="button"
                   onClick={() => changeMonth(1)}
                   className="h-6 w-6 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
-                  aria-label="Next month"
+                  aria-label={t('search.nextMonth')}
                 >
                   ›
                 </button>
               </div>
 
               <div className="grid grid-cols-7 gap-y-1 text-center">
-                {WEEKDAYS.map((w) => (
+                {WEEKDAY_KEYS.map((w) => (
                   <span key={w} className="text-[11px] text-gerayo-muted">
-                    {w}
+                    {t(`search.weekdays.${w}`)}
                   </span>
                 ))}
                 {cells.map((d, i) => {
@@ -233,7 +231,7 @@ export function DateTimePicker({ value, onChange }) {
                 onClick={save}
                 className="w-full rounded-xl bg-gerayo-from px-3 py-2 text-sm font-medium text-black hover:brightness-110 transition"
               >
-                Save
+                {t('common.save')}
               </button>
             </div>
           </div>

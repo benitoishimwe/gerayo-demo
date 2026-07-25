@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import agencies from '../../data/agencies.json'
 import seatMaps from '../../data/seatMaps.json'
 import { MapPanel } from '../Layout/MapPanel'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 const PEEK = 28
 
@@ -21,6 +22,7 @@ function addMinutes(time, mins) {
 }
 
 export function RouteDetailModal({ route, onClose, onSelectSeats }) {
+  const { t } = useLanguage()
   const agency = agencies.find((a) => a.id === route.agencyId)
   const bus = seatMaps[route.busType]
   const arrivalTime = addMinutes(route.departureTime, route.durationMins)
@@ -47,12 +49,12 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
           <div className="flex items-center gap-2 px-4 py-3">
             <button
               onClick={onClose}
-              aria-label="Back"
+              aria-label={t('common.back')}
               className="-ml-1.5 h-8 w-8 rounded-full flex items-center justify-center text-gerayo-text hover:bg-gerayo-card transition"
             >
               ←
             </button>
-            <h2 className="text-sm font-medium text-gerayo-muted">Route details</h2>
+            <h2 className="text-sm font-medium text-gerayo-muted">{t('results.routeDetails')}</h2>
           </div>
 
           <div className="px-3 pb-3 md:hidden">
@@ -60,7 +62,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
               <div className="min-w-0">
                 <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-gerayo-muted">
                   <span className="h-2 w-2 flex-none rounded-full bg-gerayo-from" />
-                  <span className="truncate">Departs</span>
+                  <span className="truncate">{t('results.departs')}</span>
                 </div>
                 <div className="mt-1 text-xl font-bold leading-none text-white whitespace-nowrap">{route.departureTime}</div>
               </div>
@@ -77,7 +79,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
               <div className="min-w-0 text-right">
                 <div className="flex items-center justify-end gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-gerayo-muted">
                   <span className="h-2 w-2 flex-none rounded-full border border-gerayo-to bg-gerayo-panel" />
-                  <span className="truncate">Arrives</span>
+                  <span className="truncate">{t('results.arrives')}</span>
                 </div>
                 <div className="mt-1 text-xl font-bold leading-none text-white whitespace-nowrap">{arrivalTime}</div>
               </div>
@@ -110,9 +112,9 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
           <div className="h-full w-[calc(100%-28px)] flex-none snap-start overflow-y-auto bg-gerayo-panel p-5 pt-40 pb-20 md:w-auto md:overflow-visible md:snap-none md:bg-transparent md:pt-5 md:pb-5">
           <div className="hidden md:block">
             <div className="grid grid-cols-3 items-center">
-              <div className="text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Departs</div>
-              <div className="text-center text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Time</div>
-              <div className="text-right text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">Arrives</div>
+              <div className="text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.departs')}</div>
+              <div className="text-center text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.time')}</div>
+              <div className="text-right text-[11px] font-medium uppercase tracking-wide text-gerayo-muted">{t('results.arrives')}</div>
             </div>
 
             <div className="mt-1 grid grid-cols-3 items-center">
@@ -167,7 +169,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
                   <div>
                     <div className="text-xs text-gerayo-muted">{route.departureTime}</div>
                     <div className="text-base font-semibold text-white">{route.origin}</div>
-                    <div className="mt-0.5 text-xs text-gerayo-muted">Departure · {bus?.label}</div>
+                    <div className="mt-0.5 text-xs text-gerayo-muted">{t('results.departure', { busLabel: bus?.label })}</div>
                   </div>
                   <div className="mt-1 rounded-full bg-gerayo-bg border border-gerayo-border px-2 py-0.5 text-[11px] font-medium text-gerayo-muted">
                     {formatDuration(route.durationMins)}
@@ -176,7 +178,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
                 <div>
                   <div className="text-xs text-gerayo-muted">{arrivalTime}</div>
                   <div className="text-base font-semibold text-white">{route.destination}</div>
-                  <div className="mt-0.5 text-xs text-gerayo-muted">Arrival</div>
+                  <div className="mt-0.5 text-xs text-gerayo-muted">{t('results.arrival')}</div>
                 </div>
               </div>
             </div>
@@ -191,7 +193,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
           </div>
 
           <div className="mt-6 text-center text-[11px] text-gerayo-muted">
-            Remember to confirm information about platform and delays.
+            {t('results.confirmNote')}
           </div>
           </div>
         </div>
@@ -201,7 +203,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
             onClick={() => onSelectSeats(route)}
             className="rounded-full bg-gerayo-from px-4 py-2 text-xs font-semibold text-black shadow-lg transition hover:brightness-110"
           >
-            Buy ticket · {route.price.toLocaleString()} RWF
+            {t('results.buyTicket', { price: route.price.toLocaleString() })}
           </button>
         </div>
       </div>

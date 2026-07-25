@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Button } from '../common/Button'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export function PinEntry({ label, onConfirm, onBack }) {
+  const { t } = useLanguage()
   const [pin, setPin] = useState('')
 
   return (
@@ -34,14 +36,14 @@ export function PinEntry({ label, onConfirm, onBack }) {
 
       <div className="flex gap-3">
         <Button variant="secondary" onClick={onBack}>
-          Back
+          {t('common.back')}
         </Button>
         <Button
           disabled={pin.length !== 4}
           onClick={() => onConfirm(pin)}
           className="bg-gerayo-to text-white hover:brightness-110 disabled:bg-gerayo-to/40"
         >
-          Confirm Payment
+          {t('payment.confirmPayment')}
         </Button>
       </div>
     </div>

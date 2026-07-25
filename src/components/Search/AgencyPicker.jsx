@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import agencies from '../../data/agencies.json'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function initials(name) {
   return name
@@ -11,6 +12,7 @@ function initials(name) {
 }
 
 export function AgencyPicker({ agencyIds, setAgencyIds, compact = false }) {
+  const { t } = useLanguage()
   const [open, setOpen] = useState(false)
   const [draft, setDraft] = useState(agencyIds)
   const [showToast, setShowToast] = useState(false)
@@ -27,10 +29,10 @@ export function AgencyPicker({ agencyIds, setAgencyIds, compact = false }) {
 
   const allSelected = agencyIds.length === agencies.length
   const label = allSelected
-    ? 'All agencies'
+    ? t('search.allAgencies')
     : agencyIds.length === 1
     ? agencies.find((a) => a.id === agencyIds[0])?.name
-    : `${agencyIds.length} agencies`
+    : t('search.agenciesCount', { count: agencyIds.length })
   const selectedOne = agencyIds.length === 1 ? agencies.find((a) => a.id === agencyIds[0]) : null
 
   const toggle = (id) => {
@@ -100,19 +102,19 @@ export function AgencyPicker({ agencyIds, setAgencyIds, compact = false }) {
                 type="button"
                 onClick={() => setOpen(false)}
                 className="text-gerayo-muted hover:text-gerayo-text"
-                aria-label="Close"
+                aria-label={t('common.close')}
               >
                 <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" stroke="currentColor">
                   <path d="M5 5l10 10M15 5L5 15" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </button>
               <button type="button" onClick={resetDraft} className="text-sm text-gerayo-muted hover:text-gerayo-text">
-                Reset
+                {t('common.reset')}
               </button>
             </div>
 
             <div className="p-4">
-              <h2 className="mb-4 text-lg font-semibold text-gerayo-text">Agencies</h2>
+              <h2 className="mb-4 text-lg font-semibold text-gerayo-text">{t('search.agenciesTitle')}</h2>
 
               <div className="grid grid-cols-3 gap-2">
                 {agencies.map((a) => {
@@ -156,7 +158,7 @@ export function AgencyPicker({ agencyIds, setAgencyIds, compact = false }) {
                 onClick={done}
                 className="w-full rounded-xl bg-gerayo-from px-4 py-3 font-medium text-black hover:brightness-110 transition"
               >
-                Done
+                {t('common.done')}
               </button>
             </div>
           </div>
@@ -171,7 +173,7 @@ export function AgencyPicker({ agencyIds, setAgencyIds, compact = false }) {
                 <path d="M4 10l4 4 8-8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-            <span className="text-sm font-medium text-black">Agencies have been updated</span>
+            <span className="text-sm font-medium text-black">{t('search.agenciesUpdatedToast')}</span>
           </div>
         </div>
       )}

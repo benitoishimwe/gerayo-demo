@@ -1,7 +1,9 @@
+import { useLanguage } from '../../i18n/LanguageContext'
+
 const TOP_TABS = [
   {
     key: 'kigali',
-    label: 'Kigali City',
+    labelKey: 'header.kigaliCity',
     icon: (active) => (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path
@@ -16,7 +18,7 @@ const TOP_TABS = [
   },
   {
     key: 'provinces',
-    label: 'Provinces',
+    labelKey: 'header.provinces',
     icon: (active) => (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <circle cx="12" cy="12" r="9" stroke={active ? '#ffffff' : '#9ca3af'} strokeWidth="1.6" />
@@ -27,15 +29,16 @@ const TOP_TABS = [
 ]
 
 export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopTab, showTickets = false }) {
+  const { t } = useLanguage()
   return (
     <div className="flex-shrink-0 border-b border-gerayo-border">
       <div className="flex items-center justify-between px-4 py-3">
-        <span className="text-xl font-bold text-white">{showTickets ? 'Tickets' : 'Gerayo'}</span>
+        <span className="text-xl font-bold text-white">{showTickets ? t('header.tickets') : 'Gerayo'}</span>
 
         <div className="flex items-center gap-2">
           <button
             onClick={onOpenAccount}
-            aria-label="Account"
+            aria-label={t('header.account')}
             className="flex h-9 w-9 items-center justify-center rounded-full bg-gerayo-card border border-gerayo-border text-gerayo-text hover:bg-gerayo-border transition"
           >
             <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
@@ -59,7 +62,7 @@ export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopT
                 }`}
               >
                 {tab.icon(isActive)}
-                {tab.label}
+                {t(tab.labelKey)}
               </button>
             )
           })}

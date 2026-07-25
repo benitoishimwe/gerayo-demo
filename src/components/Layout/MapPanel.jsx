@@ -4,6 +4,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import coords from '../../data/coords.json'
 import { nearestTown } from '../../utils/geo'
+import { useLanguage } from '../../i18n/LanguageContext'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
@@ -106,6 +107,7 @@ function MapClickHandler({ pickMode, onPick }) {
 
 function MapControls() {
   const map = useMap()
+  const { t } = useLanguage()
   const [locating, setLocating] = useState(false)
 
   const handleLocate = () => {
@@ -128,7 +130,7 @@ function MapControls() {
       <div className="flex flex-col overflow-hidden rounded-xl bg-neutral-900/90 shadow-lg backdrop-blur">
         <button
           type="button"
-          aria-label="Zoom in"
+          aria-label={t('map.zoomIn')}
           onClick={() => map.zoomIn()}
           className="flex h-9 w-9 items-center justify-center text-lg font-medium text-white hover:bg-white/10"
         >
@@ -137,7 +139,7 @@ function MapControls() {
         <div className="h-px w-full bg-white/10" />
         <button
           type="button"
-          aria-label="Zoom out"
+          aria-label={t('map.zoomOut')}
           onClick={() => map.zoomOut()}
           className="flex h-9 w-9 items-center justify-center text-lg font-medium text-white hover:bg-white/10"
         >
@@ -146,7 +148,7 @@ function MapControls() {
       </div>
       <button
         type="button"
-        aria-label="Find my location"
+        aria-label={t('map.findMyLocation')}
         onClick={handleLocate}
         disabled={locating}
         className="hidden md:flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
@@ -160,7 +162,7 @@ function MapControls() {
     <div className="absolute left-3 bottom-3 z-[1000] flex flex-col gap-2">
       <button
         type="button"
-        aria-label="Find my location"
+        aria-label={t('map.findMyLocation')}
         onClick={handleLocate}
         disabled={locating}
         className="flex md:hidden h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
@@ -172,7 +174,7 @@ function MapControls() {
       </button>
       <button
         type="button"
-        aria-label="Compass"
+        aria-label={t('map.compass')}
         className="hidden sm:flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10"
       >
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
@@ -194,6 +196,7 @@ export function MapPanel({
   sidebarWidth,
   className = '',
 }) {
+  const { t } = useLanguage()
   const originName = selectedRoute ? selectedRoute.origin : origin
   const destName = selectedRoute ? selectedRoute.destination : destination
 
@@ -236,7 +239,7 @@ export function MapPanel({
         {originPoint && (
           <Marker position={originPoint} icon={startIcon}>
             <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
-              Start
+              {t('map.start')}
               <br />
               {originName}
             </Tooltip>
@@ -245,7 +248,7 @@ export function MapPanel({
         {destPoint && (
           <Marker position={destPoint} icon={endIcon}>
             <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
-              End
+              {t('map.end')}
               <br />
               {destName}
             </Tooltip>

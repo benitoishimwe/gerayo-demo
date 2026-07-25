@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { Modal } from '../common/Modal'
 import { Button } from '../common/Button'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 const PRESETS = [1000, 2000, 5000, 10000]
 
 const REFILL_METHODS = [
-  { id: 'momo', label: 'MTN Mobile Money', icon: '📱' },
-  { id: 'airtel', label: 'Airtel Money', icon: '📶' },
+  { id: 'momo', labelKey: 'payment.methods.momo', icon: '📱' },
+  { id: 'airtel', labelKey: 'payment.methods.airtel', icon: '📶' },
 ]
 
 export function WalletTopUpModal({ balance = 0, onClose, onTopUp }) {
+  const { t } = useLanguage()
   const [amount, setAmount] = useState(PRESETS[0])
   const [editing, setEditing] = useState(false)
   const [method, setMethod] = useState(REFILL_METHODS[0].id)
@@ -25,15 +27,15 @@ export function WalletTopUpModal({ balance = 0, onClose, onTopUp }) {
   }
 
   return (
-    <Modal title="Wallet" onClose={onClose} sidebar>
+    <Modal title={t('wallet.title')} onClose={onClose} sidebar>
       <div className="flex h-full flex-col">
       <div className="rounded-2xl bg-gradient-to-br from-gerayo-card to-gerayo-card/60 border border-gerayo-border px-4 py-3 mb-6">
-        <div className="text-xs text-gerayo-muted">Funds in the wallet</div>
+        <div className="text-xs text-gerayo-muted">{t('wallet.fundsInWallet')}</div>
         <div className="text-2xl font-bold text-white">{balance.toLocaleString()} RWF</div>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="text-xs text-gerayo-muted mb-1">Refill amount</div>
+        <div className="text-xs text-gerayo-muted mb-1">{t('wallet.refillAmount')}</div>
         {editing ? (
           <input
             autoFocus
@@ -78,7 +80,7 @@ export function WalletTopUpModal({ balance = 0, onClose, onTopUp }) {
             }`}
           >
             <span className="text-xl">{m.icon}</span>
-            <div className="flex-1 text-sm font-medium text-white">{m.label}</div>
+            <div className="flex-1 text-sm font-medium text-white">{t(m.labelKey)}</div>
             <span
               className={`h-4 w-4 rounded-full border-2 ${
                 method === m.id ? 'border-gerayo-from bg-gerayo-from' : 'border-gerayo-muted'
@@ -90,21 +92,21 @@ export function WalletTopUpModal({ balance = 0, onClose, onTopUp }) {
 
       <div className="mt-6 space-y-1.5 border-t border-gerayo-border pt-4 text-sm">
         <div className="flex justify-between text-gerayo-muted">
-          <span>Wallet refill</span>
+          <span>{t('wallet.walletRefill')}</span>
           <span>{amount.toLocaleString()} RWF</span>
         </div>
         <div className="flex justify-between text-gerayo-muted">
-          <span>Service fee</span>
+          <span>{t('wallet.serviceFee')}</span>
           <span>0 RWF</span>
         </div>
         <div className="flex justify-between font-semibold text-white">
-          <span>Total</span>
+          <span>{t('wallet.total')}</span>
           <span>{amount.toLocaleString()} RWF</span>
         </div>
       </div>
 
       <Button className="mt-auto pt-5" disabled={!amount} onClick={() => onTopUp(amount)}>
-        Confirm payment · {amount ? amount.toLocaleString() : 0} RWF
+        {t('wallet.confirmPayment', { amount: amount ? amount.toLocaleString() : 0 })}
       </Button>
       </div>
     </Modal>

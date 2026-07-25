@@ -16,8 +16,10 @@ import { Button } from './components/common/Button'
 import { useSearch } from './hooks/useSearch'
 import { useWallet } from './hooks/useWallet'
 import { useTickets } from './hooks/useTickets'
+import { useLanguage } from './i18n/LanguageContext'
 
 export default function App() {
+  const { t } = useLanguage()
   const search = useSearch()
   const wallet = useWallet()
   const { tickets, addTicket, updateTicketStatus } = useTickets()
@@ -149,7 +151,7 @@ export default function App() {
               </div>
               {search.canSearch && (
                 <div className="flex-shrink-0 px-4 pb-3">
-                  <Button onClick={search.search}>Reba inzira →</Button>
+                  <Button onClick={search.search}>{t('search.searchButton')}</Button>
                 </div>
               )}
             </>

@@ -1,16 +1,19 @@
+import { useLanguage } from '../../i18n/LanguageContext'
+
 export function PassengerList({ selectedSeats, passengers, onChangeName }) {
+  const { t } = useLanguage()
   if (selectedSeats.length === 0) {
     return (
       <div className="gerayo-fade-up flex flex-col items-center gap-2 rounded-xl border border-dashed border-gerayo-border py-10 text-center text-sm text-gerayo-muted">
         <span className="text-2xl">🪑</span>
-        Select a seat to add a passenger.
+        {t('seat.selectSeatPrompt')}
       </div>
     )
   }
 
   return (
     <div className="space-y-2.5">
-      <div className="text-[11px] font-semibold uppercase tracking-widest text-gerayo-muted">Passengers</div>
+      <div className="text-[11px] font-semibold uppercase tracking-widest text-gerayo-muted">{t('seat.passengerLabel')}</div>
       {selectedSeats.map((seatId, idx) => (
         <div
           key={seatId}
@@ -23,7 +26,7 @@ export function PassengerList({ selectedSeats, passengers, onChangeName }) {
           <input
             value={passengers[seatId] || ''}
             onChange={(e) => onChangeName(seatId, e.target.value)}
-            placeholder={`Passenger name (seat ${seatId.replace('S', '')})`}
+            placeholder={t('seat.passengerNamePlaceholder', { seat: seatId.replace('S', '') })}
             className="w-full bg-transparent text-sm text-gerayo-text outline-none placeholder:text-gerayo-muted"
           />
         </div>

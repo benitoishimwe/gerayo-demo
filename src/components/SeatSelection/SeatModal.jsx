@@ -7,8 +7,10 @@ import { PassengerList } from './PassengerList'
 import seatMaps from '../../data/seatMaps.json'
 import agencies from '../../data/agencies.json'
 import { buildSeatLayout } from '../../utils/seatLayout'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export function SeatModal({ route, onClose, onConfirm }) {
+  const { t } = useLanguage()
   const [tab, setTab] = useState('layout')
   const [selectedSeats, setSelectedSeats] = useState([])
   const [passengers, setPassengers] = useState({})
@@ -62,7 +64,7 @@ export function SeatModal({ route, onClose, onConfirm }) {
               tab === 'layout' ? 'bg-gerayo-from text-black' : 'bg-gerayo-card text-gerayo-muted hover:text-white'
             }`}
           >
-            From Layout
+            {t('seat.fromLayout')}
           </button>
           <button
             onClick={() => setTab('passengers')}
@@ -70,7 +72,7 @@ export function SeatModal({ route, onClose, onConfirm }) {
               tab === 'passengers' ? 'bg-gerayo-from text-black' : 'bg-gerayo-card text-gerayo-muted hover:text-white'
             }`}
           >
-            Passengers ({selectedSeats.length})
+            {t('seat.passengers', { count: selectedSeats.length })}
           </button>
         </div>
 
@@ -84,7 +86,7 @@ export function SeatModal({ route, onClose, onConfirm }) {
                   <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" />
                   <path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
                 </svg>
-                DRIVER
+                {t('seat.driver')}
               </div>
               <SeatGrid
                 rows={rows}
@@ -105,20 +107,22 @@ export function SeatModal({ route, onClose, onConfirm }) {
       <div className="sticky bottom-0 -mx-5 mt-5 border-t border-gerayo-border bg-gerayo-panel px-5 pt-4">
         <div className="flex items-center justify-between text-white">
           <span className="text-sm text-gerayo-muted">
-            {selectedSeats.length > 0 ? `${selectedSeats.length} seat${selectedSeats.length > 1 ? 's' : ''} selected` : 'Total'}
+            {selectedSeats.length > 0
+              ? t(selectedSeats.length > 1 ? 'seat.seatsSelectedPlural' : 'seat.seatsSelected', { count: selectedSeats.length })
+              : t('seat.total')}
           </span>
           <span className="text-lg font-semibold">{total.toLocaleString()} RWF</span>
         </div>
 
         <div className="mb-1 mt-3 flex gap-3">
           <Button variant="secondary" onClick={onClose}>
-            Cancel
+            {t('common.cancel')}
           </Button>
           <Button
             disabled={selectedSeats.length === 0}
             onClick={() => onConfirm({ selectedSeats, passengers, total })}
           >
-            Confirm Booking
+            {t('seat.confirmBooking')}
           </Button>
         </div>
       </div>

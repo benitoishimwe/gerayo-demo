@@ -1,6 +1,8 @@
 import { QRCodeSVG } from 'qrcode.react'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export function PrintTicket({ ticket, agency }) {
+  const { t } = useLanguage()
   const accent = agency?.color || '#16a34a'
 
   return (
@@ -42,7 +44,7 @@ export function PrintTicket({ ticket, agency }) {
           <span style={{ fontSize: 19, fontWeight: 800, color: '#fff', letterSpacing: 0.3 }}>Gerayo</span>
         </div>
         <span style={{ fontSize: 11, fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: 0.6 }}>
-          Bus Ticket
+          {t('ticket.print.busTicket')}
         </span>
       </div>
 
@@ -62,7 +64,7 @@ export function PrintTicket({ ticket, agency }) {
               whiteSpace: 'nowrap',
             }}
           >
-            {ticket.status}
+            {t(`ticket.status.${ticket.status}`)}
           </span>
         </div>
 
@@ -77,10 +79,10 @@ export function PrintTicket({ ticket, agency }) {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
           <tbody>
             {[
-              ['Date', ticket.date],
-              ['Departure', ticket.departureTime],
-              ['Seats', ticket.seats.join(', ')],
-              ['Ticket ID', ticket.id],
+              [t('ticket.print.date'), ticket.date],
+              [t('ticket.print.departure'), ticket.departureTime],
+              [t('ticket.print.seats'), ticket.seats.join(', ')],
+              [t('ticket.print.ticketId'), ticket.id],
             ].map(([label, value]) => (
               <tr key={label} style={{ borderTop: '1px solid #eee' }}>
                 <td style={{ padding: '8px 0', color: '#777' }}>{label}</td>
@@ -88,7 +90,7 @@ export function PrintTicket({ ticket, agency }) {
               </tr>
             ))}
             <tr style={{ borderTop: '1px solid #eee' }}>
-              <td style={{ padding: '8px 0', color: '#777', fontWeight: 700 }}>Total Paid</td>
+              <td style={{ padding: '8px 0', color: '#777', fontWeight: 700 }}>{t('ticket.print.totalPaid')}</td>
               <td style={{ padding: '8px 0', textAlign: 'right', fontWeight: 800, fontSize: 15, color: accent }}>
                 {ticket.total.toLocaleString()} RWF
               </td>
@@ -133,11 +135,11 @@ export function PrintTicket({ ticket, agency }) {
         <div style={{ background: '#fff', padding: 12, borderRadius: 12, border: '1px solid #eee' }}>
           <QRCodeSVG value={ticket.id} size={150} fgColor="#111111" bgColor="#ffffff" />
         </div>
-        <span style={{ fontSize: 12, fontWeight: 600, color: '#555' }}>Show this QR code to the driver when boarding</span>
+        <span style={{ fontSize: 12, fontWeight: 600, color: '#555' }}>{t('ticket.print.showQr')}</span>
       </div>
 
       <div style={{ background: '#fafafa', padding: '12px 24px', textAlign: 'center' }}>
-        <span style={{ fontSize: 10, color: '#999' }}>Issued via Gerayo — Book Intercity Buses</span>
+        <span style={{ fontSize: 10, color: '#999' }}>{t('ticket.print.issuedVia')}</span>
         <div style={{ fontSize: 10, color: '#999', marginTop: 2 }}>gerayoapp.com</div>
       </div>
     </div>

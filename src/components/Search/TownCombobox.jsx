@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import provinces from '../../data/provinces.json'
 import { getRecentTowns, addRecentTown } from '../../utils/recentSearches'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function filterGroups(query) {
   const q = query.trim().toLowerCase()
@@ -33,6 +34,7 @@ function TargetIcon({ className }) {
 }
 
 export function TownCombobox({ label, value, onChange, dotColor }) {
+  const { t } = useLanguage()
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState(value || '')
   const [activeIndex, setActiveIndex] = useState(-1)
@@ -132,7 +134,7 @@ export function TownCombobox({ label, value, onChange, dotColor }) {
           onMouseDown={(e) => e.preventDefault()}
           onClick={useCurrentLocation}
           className="flex-shrink-0 text-gerayo-muted hover:text-gerayo-from transition"
-          aria-label="Koresha aho uri ubu"
+          aria-label={t('search.useCurrentLocation')}
         >
           <TargetIcon className="h-4 w-4" />
         </button>
@@ -149,14 +151,14 @@ export function TownCombobox({ label, value, onChange, dotColor }) {
                 className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-gerayo-from hover:bg-gerayo-border"
               >
                 <TargetIcon className="h-4 w-4 flex-shrink-0" />
-                Koresha aho uri ubu
+                {t('search.useCurrentLocation')}
               </button>
               <div className="px-4 pt-2 pb-1 text-xs font-semibold text-gerayo-muted">
-                Ibyo washatse vuba
+                {t('search.recentSearches')}
               </div>
               {recent.length === 0 ? (
                 <div className="px-4 py-6 text-center text-sm text-gerayo-muted">
-                  Ntiwarashaka ahantu.
+                  {t('search.noRecentPlaces')}
                 </div>
               ) : (
                 recent.map((t) => (
@@ -176,7 +178,7 @@ export function TownCombobox({ label, value, onChange, dotColor }) {
           ) : (
             <>
               {flatTowns.length === 0 && (
-                <div className="px-4 py-3 text-sm text-gerayo-muted">Nta gace kabonetse</div>
+                <div className="px-4 py-3 text-sm text-gerayo-muted">{t('search.noResultsFound')}</div>
               )}
               {groups.map((g) => (
                 <div key={g.province}>

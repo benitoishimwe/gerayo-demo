@@ -1,4 +1,7 @@
+import { useLanguage } from '../../i18n/LanguageContext'
+
 export function Modal({ title, onClose, children, wide, sidebar }) {
+  const { t } = useLanguage()
   if (sidebar) {
     return (
       <div className="absolute inset-0 z-[2000] flex items-stretch justify-start bg-black/70 md:bg-transparent md:pointer-events-none">
@@ -9,7 +12,7 @@ export function Modal({ title, onClose, children, wide, sidebar }) {
             <h2 className="text-lg font-semibold text-gerayo-text">{title}</h2>
             <button
               onClick={onClose}
-              aria-label="Close"
+              aria-label={t('common.close')}
               className="h-8 w-8 rounded-full flex items-center justify-center text-gerayo-muted hover:bg-gerayo-card hover:text-white transition"
             >
               ✕

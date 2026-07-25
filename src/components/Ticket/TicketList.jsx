@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { TicketCard } from './TicketCard'
 import { TicketArchiveRow } from './TicketArchiveRow'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function TicketOutlineIcon() {
   return (
@@ -17,6 +18,7 @@ function TicketOutlineIcon() {
 }
 
 export function TicketList({ tickets, onPlanJourney }) {
+  const { t } = useLanguage()
   const [tab, setTab] = useState('current')
 
   const current = tickets.filter((t) => t.status === 'pending' || t.status === 'paid')
@@ -33,7 +35,7 @@ export function TicketList({ tickets, onPlanJourney }) {
               tab === 'current' ? 'bg-gerayo-border text-white' : 'text-gerayo-muted'
             }`}
           >
-            Current
+            {t('ticket.current')}
           </button>
           <button
             onClick={() => setTab('archive')}
@@ -41,7 +43,7 @@ export function TicketList({ tickets, onPlanJourney }) {
               tab === 'archive' ? 'bg-gerayo-border text-white' : 'text-gerayo-muted'
             }`}
           >
-            Archive
+            {t('ticket.archive')}
           </button>
         </div>
       </div>
@@ -51,16 +53,14 @@ export function TicketList({ tickets, onPlanJourney }) {
           <div className="flex h-full flex-col items-center justify-center gap-3 py-16 text-center">
             <TicketOutlineIcon />
             <div className="text-base font-semibold text-white">
-              {tab === 'current' ? 'No tickets' : 'No past tickets'}
+              {tab === 'current' ? t('ticket.noTickets') : t('ticket.noPastTickets')}
             </div>
             <div className="max-w-[240px] text-sm text-gerayo-muted">
-              {tab === 'current'
-                ? 'You have not purchased any tickets. Maybe it is time to plan a journey?'
-                : 'Tickets that have expired or been refunded will show up here.'}
+              {tab === 'current' ? t('ticket.noTicketsMessage') : t('ticket.noPastTicketsMessage')}
             </div>
             {tab === 'current' && (
               <button onClick={onPlanJourney} className="text-sm font-semibold text-gerayo-from hover:underline">
-                Plan a journey
+                {t('ticket.planJourney')}
               </button>
             )}
           </div>

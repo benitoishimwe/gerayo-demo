@@ -1,4 +1,6 @@
-function formatGroupLabel(timestamp) {
+import { useLanguage } from '../../i18n/LanguageContext'
+
+function formatGroupLabel(timestamp, t) {
   const date = new Date(timestamp)
   const today = new Date()
   const yesterday = new Date()
@@ -13,15 +15,16 @@ function formatGroupLabel(timestamp) {
     year: 'numeric',
   })
 
-  if (isSameDay(date, today)) return `Uyu munsi, ${formatted}`
-  if (isSameDay(date, yesterday)) return `Ejo, ${formatted}`
+  if (isSameDay(date, today)) return t('routeHistory.today', { date: formatted })
+  if (isSameDay(date, yesterday)) return t('routeHistory.yesterday', { date: formatted })
   return formatted
 }
 
 export function RouteHistory({ history, onSelect, onClear }) {
+  const { t } = useLanguage()
   const groups = []
   for (const r of history) {
-    const label = formatGroupLabel(r.searchedAt)
+    const label = formatGroupLabel(r.searchedAt, t)
     let group = groups.find((g) => g.label === label)
     if (!group) {
       group = { label, items: [] }
@@ -32,10 +35,10 @@ export function RouteHistory({ history, onSelect, onClear }) {
 
   return (
     <div className="border-t border-gerayo-border pt-3">
-      <h3 className="text-base font-bold text-white">Amateka y'inzira</h3>
+      <h3 className="text-base font-bold text-white">{t('routeHistory.title')}</h3>
 
       {history.length === 0 ? (
-        <p className="mt-2 text-xs text-gerayo-muted">Ntabwo warashakisha inzira.</p>
+        <p className="mt-2 text-xs text-gerayo-muted">{t('routeHistory.empty')}</p>
       ) : (
         <>
           {groups.map((group) => (
@@ -70,7 +73,7 @@ export function RouteHistory({ history, onSelect, onClear }) {
             onClick={onClear}
             className="mt-4 w-full text-center text-xs font-medium text-gerayo-muted underline hover:text-gerayo-text"
           >
-            Siba amateka
+            {t('routeHistory.clear')}
           </button>
         </>
       )}

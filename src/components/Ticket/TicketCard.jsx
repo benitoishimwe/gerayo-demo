@@ -4,8 +4,10 @@ import { Button } from '../common/Button'
 import { QRBlock } from './QRBlock'
 import { PrintTicket } from './PrintTicket'
 import agencies from '../../data/agencies.json'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export function TicketCard({ ticket }) {
+  const { t } = useLanguage()
   const agency = agencies.find((a) => a.id === ticket.agencyId)
   const [rendering, setRendering] = useState(false)
   const printRef = useRef(null)
@@ -33,8 +35,8 @@ export function TicketCard({ ticket }) {
     setRendering(false)
   }
   const sendEmail = () => {
-    const email = window.prompt('Send ticket to email:')
-    if (email) window.alert(`Ticket sent to ${email} (demo only)`)
+    const email = window.prompt(t('ticket.sendEmailPrompt'))
+    if (email) window.alert(t('ticket.sendEmailConfirm', { email }))
   }
 
   return (
@@ -48,7 +50,7 @@ export function TicketCard({ ticket }) {
         {ticket.origin} → {ticket.destination}
       </div>
       <div className="mt-1 text-xs text-gerayo-muted">
-        {ticket.date} · {ticket.departureTime} · Seats: {ticket.seats.join(', ')}
+        {ticket.date} · {ticket.departureTime} · {t('ticket.seats', { seats: ticket.seats.join(', ') })}
       </div>
       <div className="mt-1 text-sm font-semibold text-white">{ticket.total.toLocaleString()} RWF</div>
 
@@ -57,15 +59,15 @@ export function TicketCard({ ticket }) {
           <QRBlock value={ticket.id} />
           <div className="flex gap-2">
             <Button variant="secondary" onClick={download} disabled={rendering}>
-              {rendering ? 'Preparing PDF…' : 'Download'}
+              {rendering ? t('ticket.preparingPdf') : t('ticket.download')}
             </Button>
             <Button variant="secondary" onClick={sendEmail}>
-              Send to Email
+              {t('ticket.sendToEmail')}
             </Button>
           </div>
         </div>
       ) : (
-        <div className="mt-3 text-xs text-gerayo-muted">Awaiting payment</div>
+        <div className="mt-3 text-xs text-gerayo-muted">{t('ticket.awaitingPayment')}</div>
       )}
 
       {ticket.status === 'paid' && (

@@ -1,10 +1,13 @@
+import { useLanguage } from '../../i18n/LanguageContext'
+
 const METHODS = [
-  { id: 'wallet', label: 'Gerayo Wallet', sub: (balance) => `Balance: ${balance.toLocaleString()} RWF`, icon: '👛', tint: 'bg-gerayo-from/15 text-gerayo-from' },
-  { id: 'momo', label: 'MTN Mobile Money', icon: '📱', tint: 'bg-yellow-500/15 text-yellow-400' },
-  { id: 'airtel', label: 'Airtel Money', icon: '📶', tint: 'bg-red-500/15 text-red-400' },
+  { id: 'wallet', labelKey: 'payment.methods.wallet', icon: '👛', tint: 'bg-gerayo-from/15 text-gerayo-from' },
+  { id: 'momo', labelKey: 'payment.methods.momo', icon: '📱', tint: 'bg-yellow-500/15 text-yellow-400' },
+  { id: 'airtel', labelKey: 'payment.methods.airtel', icon: '📶', tint: 'bg-red-500/15 text-red-400' },
 ]
 
 export function PaymentMethodList({ selected, onSelect, balance, total }) {
+  const { t } = useLanguage()
   return (
     <div className="overflow-hidden rounded-xl border border-gerayo-border bg-gerayo-card/60">
       {METHODS.map((m, i) => {
@@ -27,9 +30,11 @@ export function PaymentMethodList({ selected, onSelect, balance, total }) {
               {isSelected && <span className="h-2 w-2 rounded-full bg-gerayo-to" />}
             </span>
             <div className="flex-1">
-              <div className="text-sm font-medium text-white">{m.label}</div>
-              {m.id === 'wallet' && <div className="text-xs text-gerayo-muted">{m.sub(balance)}</div>}
-              {insufficient && <div className="text-xs text-red-400">Insufficient balance</div>}
+              <div className="text-sm font-medium text-white">{t(m.labelKey)}</div>
+              {m.id === 'wallet' && (
+                <div className="text-xs text-gerayo-muted">{t('payment.methods.walletBalance', { balance: balance.toLocaleString() })}</div>
+              )}
+              {insufficient && <div className="text-xs text-red-400">{t('payment.insufficientBalance')}</div>}
             </div>
             <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-base ${m.tint}`}>
               {m.icon}

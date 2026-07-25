@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { ResultCard } from './ResultCard'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 const PAGE_SIZE = 6
 const STEP = 3
@@ -62,6 +63,7 @@ function generateLater(base, count, seq) {
 }
 
 export function ResultsList({ results, onSelectSeats, focusedRouteId, onFocusRoute, onHoverRoute, onOpenDetail, dateLabel }) {
+  const { t } = useLanguage()
   const [extended, setExtended] = useState(results)
   const [visibleStart, setVisibleStart] = useState(0)
   const [visibleEnd, setVisibleEnd] = useState(Math.min(PAGE_SIZE, results.length))
@@ -81,7 +83,7 @@ export function ResultsList({ results, onSelectSeats, focusedRouteId, onFocusRou
   if (results.length === 0) {
     return (
       <div className="mt-6 rounded-xl border border-dashed border-gerayo-border p-6 text-center text-gerayo-muted">
-        Nta mirongo iboneka. Try a different route or agency.
+        {t('results.empty')}
       </div>
     )
   }
@@ -144,7 +146,7 @@ export function ResultsList({ results, onSelectSeats, focusedRouteId, onFocusRou
         onClick={handleEarlier}
         className="block w-full text-center text-sm font-medium text-gerayo-from underline underline-offset-2 hover:brightness-110"
       >
-        Earlier routes
+        {t('results.earlierRoutes')}
       </button>
 
       {visible.map((route) => (
@@ -165,7 +167,7 @@ export function ResultsList({ results, onSelectSeats, focusedRouteId, onFocusRou
         onClick={handleLater}
         className="block w-full text-center text-sm font-medium text-gerayo-from underline underline-offset-2 hover:brightness-110"
       >
-        Later routes
+        {t('results.laterRoutes')}
       </button>
     </div>
   )

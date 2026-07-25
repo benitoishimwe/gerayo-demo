@@ -1,7 +1,9 @@
+import { useLanguage } from '../../i18n/LanguageContext'
+
 const TABS = [
   {
     key: 'trip',
-    label: 'Trip',
+    labelKey: 'nav.trip',
     icon: (active) => (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
         <path
@@ -22,7 +24,7 @@ const TABS = [
   },
   {
     key: 'schedules',
-    label: 'Schedules',
+    labelKey: 'nav.schedules',
     icon: (active) => (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
         <rect x="4" y="3" width="16" height="18" rx="2" stroke={active ? '#22c55e' : '#9ca3af'} strokeWidth="1.6" />
@@ -32,7 +34,7 @@ const TABS = [
   },
   {
     key: 'tickets',
-    label: 'Tickets',
+    labelKey: 'nav.tickets',
     icon: (active) => (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
         <path
@@ -48,6 +50,7 @@ const TABS = [
 ]
 
 export function BottomNav({ active, onChange }) {
+  const { t } = useLanguage()
   return (
     <div className="flex flex-shrink-0 items-stretch justify-around border-t border-gerayo-border bg-gerayo-bg px-2 py-2">
       {TABS.map((tab) => {
@@ -60,7 +63,7 @@ export function BottomNav({ active, onChange }) {
           >
             {tab.icon(isActive)}
             <span className={`text-xs ${isActive ? 'font-semibold text-white' : 'text-gerayo-muted'}`}>
-              {tab.label}
+              {t(tab.labelKey)}
             </span>
           </button>
         )
