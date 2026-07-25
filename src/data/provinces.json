@@ -1,0 +1,22 @@
+[
+  {
+    "province": "City of Kigali",
+    "towns": ["Nyabugogo", "Kimironko", "Remera"]
+  },
+  {
+    "province": "Northern Province",
+    "towns": ["Musanze", "Ruhengeri", "Byumba", "Gicumbi"]
+  },
+  {
+    "province": "Southern Province",
+    "towns": ["Huye", "Muhanga", "Nyanza", "Butare"]
+  },
+  {
+    "province": "Eastern Province",
+    "towns": ["Rwamagana", "Kayonza", "Nyagatare", "Kibungo"]
+  },
+  {
+    "province": "Western Province",
+    "towns": ["Rubavu", "Karongi", "Rusizi", "Gisenyi"]
+  }
+]

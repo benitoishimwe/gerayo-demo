@@ -1,0 +1,10 @@
+[
+  { "id": "volcano", "name": "Volcano Express", "color": "#16a34a" },
+  { "id": "ritco", "name": "RITCO", "color": "#2563eb" },
+  { "id": "ruhire", "name": "Ruhire Express", "color": "#f59e0b" },
+  { "id": "kivubelt", "name": "Kivu Belt Express", "color": "#0ea5e9" },
+  { "id": "capital", "name": "Capital Express", "color": "#ef4444" },
+  { "id": "virunga", "name": "Virunga Express", "color": "#8b5cf6" },
+  { "id": "eastafrica", "name": "East Africa Express", "color": "#14b8a6" },
+  { "id": "fidelity", "name": "Fidelity Express", "color": "#f97316" }
+]

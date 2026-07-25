@@ -1,0 +1,4412 @@
+[
+  {
+    "id": "r1",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 96,
+    "price": 2300,
+    "takenSeats": [
+      "S04",
+      "S07",
+      "S10"
+    ]
+  },
+  {
+    "id": "r2",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 97,
+    "price": 2100,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r3",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "10:00",
+    "durationMins": 98,
+    "price": 2400,
+    "takenSeats": [
+      "S6",
+      "S9",
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r4",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "14:00",
+    "durationMins": 99,
+    "price": 2200,
+    "takenSeats": []
+  },
+  {
+    "id": "r5",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 100,
+    "price": 2000,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r6",
+    "origin": "Nyabugogo",
+    "destination": "Musanze",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 101,
+    "price": 2300,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r7",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 93,
+    "price": 2200,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r8",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 94,
+    "price": 2000,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r9",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "12:00",
+    "durationMins": 95,
+    "price": 2300,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r10",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 96,
+    "price": 2100,
+    "takenSeats": []
+  },
+  {
+    "id": "r11",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 97,
+    "price": 2400,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r12",
+    "origin": "Musanze",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 98,
+    "price": 2200,
+    "takenSeats": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r13",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 86,
+    "price": 2100,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r14",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 87,
+    "price": 1900,
+    "takenSeats": [
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r15",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "06:00",
+    "durationMins": 88,
+    "price": 2200,
+    "takenSeats": [
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r16",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "08:00",
+    "durationMins": 89,
+    "price": 2000,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r17",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "11:00",
+    "durationMins": 90,
+    "price": 2300,
+    "takenSeats": [
+      "S01",
+      "S04",
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r18",
+    "origin": "Nyabugogo",
+    "destination": "Ruhengeri",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "15:30",
+    "durationMins": 91,
+    "price": 2100,
+    "takenSeats": []
+  },
+  {
+    "id": "r19",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "16:15",
+    "durationMins": 94,
+    "price": 2100,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r20",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "06:15",
+    "durationMins": 95,
+    "price": 1900,
+    "takenSeats": [
+      "S25",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r21",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "08:15",
+    "durationMins": 96,
+    "price": 2200,
+    "takenSeats": [
+      "S2",
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r22",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 97,
+    "price": 2000,
+    "takenSeats": []
+  },
+  {
+    "id": "r23",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 98,
+    "price": 2300,
+    "takenSeats": [
+      "S24"
+    ]
+  },
+  {
+    "id": "r24",
+    "origin": "Ruhengeri",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 99,
+    "price": 2100,
+    "takenSeats": [
+      "S25",
+      "S28"
+    ]
+  },
+  {
+    "id": "r25",
+    "origin": "Nyabugogo",
+    "destination": "Byumba",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "07:15",
+    "durationMins": 76,
+    "price": 1700,
+    "takenSeats": []
+  },
+  {
+    "id": "r26",
+    "origin": "Nyabugogo",
+    "destination": "Byumba",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "10:00",
+    "durationMins": 77,
+    "price": 2000,
+    "takenSeats": [
+      "S18"
+    ]
+  },
+  {
+    "id": "r27",
+    "origin": "Nyabugogo",
+    "destination": "Byumba",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 78,
+    "price": 1800,
+    "takenSeats": [
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r28",
+    "origin": "Nyabugogo",
+    "destination": "Byumba",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 79,
+    "price": 1600,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r29",
+    "origin": "Nyabugogo",
+    "destination": "Byumba",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 80,
+    "price": 1900,
+    "takenSeats": [
+      "S17",
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r30",
+    "origin": "Byumba",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "10:15",
+    "durationMins": 84,
+    "price": 2000,
+    "takenSeats": [
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r31",
+    "origin": "Byumba",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "14:45",
+    "durationMins": 85,
+    "price": 1800,
+    "takenSeats": [
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r32",
+    "origin": "Byumba",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "05:30",
+    "durationMins": 86,
+    "price": 1600,
+    "takenSeats": [
+      "S04",
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r33",
+    "origin": "Byumba",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "07:30",
+    "durationMins": 87,
+    "price": 1900,
+    "takenSeats": [
+      "S14",
+      "S17",
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r34",
+    "origin": "Byumba",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "10:15",
+    "durationMins": 88,
+    "price": 1700,
+    "takenSeats": []
+  },
+  {
+    "id": "r35",
+    "origin": "Nyabugogo",
+    "destination": "Gicumbi",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "05:30",
+    "durationMins": 79,
+    "price": 1900,
+    "takenSeats": [
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r36",
+    "origin": "Nyabugogo",
+    "destination": "Gicumbi",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "07:30",
+    "durationMins": 80,
+    "price": 1700,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r37",
+    "origin": "Nyabugogo",
+    "destination": "Gicumbi",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "10:15",
+    "durationMins": 81,
+    "price": 1500,
+    "takenSeats": [
+      "S34",
+      "S37",
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r38",
+    "origin": "Gicumbi",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 73,
+    "price": 1600,
+    "takenSeats": [
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r39",
+    "origin": "Gicumbi",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 74,
+    "price": 1900,
+    "takenSeats": [
+      "S26",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r40",
+    "origin": "Gicumbi",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 75,
+    "price": 1700,
+    "takenSeats": [
+      "S01",
+      "S04",
+      "S07",
+      "S10"
+    ]
+  },
+  {
+    "id": "r41",
+    "origin": "Nyabugogo",
+    "destination": "Huye",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "07:00",
+    "durationMins": 152,
+    "price": 3400,
+    "takenSeats": [
+      "S19",
+      "S22",
+      "S25"
+    ]
+  },
+  {
+    "id": "r42",
+    "origin": "Nyabugogo",
+    "destination": "Huye",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "09:30",
+    "durationMins": 153,
+    "price": 3200,
+    "takenSeats": [
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r43",
+    "origin": "Nyabugogo",
+    "destination": "Huye",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "13:15",
+    "durationMins": 154,
+    "price": 3500,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r44",
+    "origin": "Nyabugogo",
+    "destination": "Huye",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "18:30",
+    "durationMins": 155,
+    "price": 3300,
+    "takenSeats": []
+  },
+  {
+    "id": "r45",
+    "origin": "Huye",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "07:00",
+    "durationMins": 159,
+    "price": 3400,
+    "takenSeats": [
+      "S6"
+    ]
+  },
+  {
+    "id": "r46",
+    "origin": "Huye",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "09:30",
+    "durationMins": 160,
+    "price": 3200,
+    "takenSeats": [
+      "S31",
+      "S34"
+    ]
+  },
+  {
+    "id": "r47",
+    "origin": "Huye",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "13:15",
+    "durationMins": 140,
+    "price": 3500,
+    "takenSeats": [
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r48",
+    "origin": "Huye",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "18:30",
+    "durationMins": 141,
+    "price": 3300,
+    "takenSeats": [
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r49",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 70,
+    "price": 1500,
+    "takenSeats": [
+      "S14",
+      "S17",
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r50",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 50,
+    "price": 1300,
+    "takenSeats": []
+  },
+  {
+    "id": "r51",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "ritco",
+    "busType": "hyundai45",
+    "departureTime": "10:00",
+    "durationMins": 51,
+    "price": 1100,
+    "takenSeats": [
+      "S04"
+    ]
+  },
+  {
+    "id": "r52",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "14:00",
+    "durationMins": 52,
+    "price": 1400,
+    "takenSeats": [
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r53",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "19:15",
+    "durationMins": 53,
+    "price": 1200,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r54",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "07:15",
+    "durationMins": 54,
+    "price": 1500,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r55",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 53,
+    "price": 1200,
+    "takenSeats": [
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r56",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 54,
+    "price": 1500,
+    "takenSeats": [
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r57",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "12:00",
+    "durationMins": 55,
+    "price": 1300,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r58",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 56,
+    "price": 1100,
+    "takenSeats": []
+  },
+  {
+    "id": "r59",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 57,
+    "price": 1400,
+    "takenSeats": [
+      "S4"
+    ]
+  },
+  {
+    "id": "r60",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 58,
+    "price": 1200,
+    "takenSeats": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r61",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 100,
+    "price": 2100,
+    "takenSeats": [
+      "S20",
+      "S23",
+      "S26",
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r62",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 80,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r63",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "ritco",
+    "busType": "hyundai45",
+    "departureTime": "10:00",
+    "durationMins": 81,
+    "price": 2200,
+    "takenSeats": [
+      "S28"
+    ]
+  },
+  {
+    "id": "r64",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "14:00",
+    "durationMins": 82,
+    "price": 2000,
+    "takenSeats": [
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r65",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "19:15",
+    "durationMins": 83,
+    "price": 1800,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r66",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "07:15",
+    "durationMins": 84,
+    "price": 2100,
+    "takenSeats": [
+      "S34",
+      "S37",
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r67",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 86,
+    "price": 2000,
+    "takenSeats": [
+      "S43",
+      "S01",
+      "S04"
+    ]
+  },
+  {
+    "id": "r68",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 87,
+    "price": 1800,
+    "takenSeats": [
+      "S25",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r69",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "10:00",
+    "durationMins": 88,
+    "price": 2100,
+    "takenSeats": [
+      "S6",
+      "S9",
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r70",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "14:00",
+    "durationMins": 89,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r71",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 90,
+    "price": 2200,
+    "takenSeats": [
+      "S24"
+    ]
+  },
+  {
+    "id": "r72",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 91,
+    "price": 2000,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r73",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 157,
+    "price": 3600,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r74",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 158,
+    "price": 3400,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r75",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "07:00",
+    "durationMins": 159,
+    "price": 3200,
+    "takenSeats": [
+      "S26",
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r76",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "09:30",
+    "durationMins": 160,
+    "price": 3500,
+    "takenSeats": []
+  },
+  {
+    "id": "r77",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "13:15",
+    "durationMins": 161,
+    "price": 3300,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r78",
+    "origin": "Nyabugogo",
+    "destination": "Butare",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "18:30",
+    "durationMins": 162,
+    "price": 3600,
+    "takenSeats": [
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r79",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "07:30",
+    "durationMins": 159,
+    "price": 3300,
+    "takenSeats": [
+      "S26",
+      "S3",
+      "S6",
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r80",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "10:15",
+    "durationMins": 160,
+    "price": 3600,
+    "takenSeats": []
+  },
+  {
+    "id": "r81",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "14:45",
+    "durationMins": 161,
+    "price": 3400,
+    "takenSeats": [
+      "S31"
+    ]
+  },
+  {
+    "id": "r82",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "05:30",
+    "durationMins": 162,
+    "price": 3200,
+    "takenSeats": [
+      "S25",
+      "S2"
+    ]
+  },
+  {
+    "id": "r83",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "07:30",
+    "durationMins": 163,
+    "price": 3500,
+    "takenSeats": [
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r84",
+    "origin": "Butare",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "10:15",
+    "durationMins": 164,
+    "price": 3300,
+    "takenSeats": [
+      "S37",
+      "S40",
+      "S43",
+      "S01"
+    ]
+  },
+  {
+    "id": "r85",
+    "origin": "Nyabugogo",
+    "destination": "Rwamagana",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "12:00",
+    "durationMins": 57,
+    "price": 1300,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r86",
+    "origin": "Nyabugogo",
+    "destination": "Rwamagana",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "17:00",
+    "durationMins": 58,
+    "price": 1100,
+    "takenSeats": []
+  },
+  {
+    "id": "r87",
+    "origin": "Nyabugogo",
+    "destination": "Rwamagana",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 59,
+    "price": 900,
+    "takenSeats": [
+      "S34"
+    ]
+  },
+  {
+    "id": "r88",
+    "origin": "Nyabugogo",
+    "destination": "Rwamagana",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 60,
+    "price": 1200,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r89",
+    "origin": "Rwamagana",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 45,
+    "price": 1200,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r90",
+    "origin": "Rwamagana",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 46,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r91",
+    "origin": "Rwamagana",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 47,
+    "price": 1300,
+    "takenSeats": [
+      "S28"
+    ]
+  },
+  {
+    "id": "r92",
+    "origin": "Rwamagana",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 48,
+    "price": 1100,
+    "takenSeats": [
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r93",
+    "origin": "Nyabugogo",
+    "destination": "Kayonza",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "06:00",
+    "durationMins": 80,
+    "price": 1700,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r94",
+    "origin": "Nyabugogo",
+    "destination": "Kayonza",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 81,
+    "price": 1500,
+    "takenSeats": [
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r95",
+    "origin": "Nyabugogo",
+    "destination": "Kayonza",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 82,
+    "price": 1800,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r96",
+    "origin": "Nyabugogo",
+    "destination": "Kayonza",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 83,
+    "price": 1600,
+    "takenSeats": []
+  },
+  {
+    "id": "r97",
+    "origin": "Kayonza",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "07:00",
+    "durationMins": 77,
+    "price": 1900,
+    "takenSeats": [
+      "S25",
+      "S28",
+      "S31"
+    ]
+  },
+  {
+    "id": "r98",
+    "origin": "Kayonza",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "09:30",
+    "durationMins": 78,
+    "price": 1700,
+    "takenSeats": [
+      "S9",
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r99",
+    "origin": "Kayonza",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "13:15",
+    "durationMins": 79,
+    "price": 1500,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r100",
+    "origin": "Kayonza",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "18:30",
+    "durationMins": 80,
+    "price": 1800,
+    "takenSeats": []
+  },
+  {
+    "id": "r101",
+    "origin": "Nyabugogo",
+    "destination": "Nyagatare",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 148,
+    "price": 3500,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r102",
+    "origin": "Nyabugogo",
+    "destination": "Nyagatare",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 149,
+    "price": 3300,
+    "takenSeats": [
+      "S26",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r103",
+    "origin": "Nyabugogo",
+    "destination": "Nyagatare",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 150,
+    "price": 3100,
+    "takenSeats": [
+      "S19",
+      "S22",
+      "S25",
+      "S28"
+    ]
+  },
+  {
+    "id": "r104",
+    "origin": "Nyagatare",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "08:00",
+    "durationMins": 155,
+    "price": 3100,
+    "takenSeats": []
+  },
+  {
+    "id": "r105",
+    "origin": "Nyagatare",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 156,
+    "price": 3400,
+    "takenSeats": [
+      "S14"
+    ]
+  },
+  {
+    "id": "r106",
+    "origin": "Nyagatare",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 157,
+    "price": 3200,
+    "takenSeats": [
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r107",
+    "origin": "Nyabugogo",
+    "destination": "Kibungo",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "07:00",
+    "durationMins": 99,
+    "price": 2100,
+    "takenSeats": [
+      "S6"
+    ]
+  },
+  {
+    "id": "r108",
+    "origin": "Nyabugogo",
+    "destination": "Kibungo",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "09:30",
+    "durationMins": 100,
+    "price": 1900,
+    "takenSeats": [
+      "S01",
+      "S04"
+    ]
+  },
+  {
+    "id": "r109",
+    "origin": "Nyabugogo",
+    "destination": "Kibungo",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "13:15",
+    "durationMins": 80,
+    "price": 2200,
+    "takenSeats": [
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r110",
+    "origin": "Nyabugogo",
+    "destination": "Kibungo",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "18:30",
+    "durationMins": 81,
+    "price": 2000,
+    "takenSeats": [
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r111",
+    "origin": "Kibungo",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "10:00",
+    "durationMins": 100,
+    "price": 1900,
+    "takenSeats": [
+      "S2",
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r112",
+    "origin": "Kibungo",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 80,
+    "price": 2200,
+    "takenSeats": []
+  },
+  {
+    "id": "r113",
+    "origin": "Kibungo",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 81,
+    "price": 2000,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r114",
+    "origin": "Kibungo",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 82,
+    "price": 1800,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r115",
+    "origin": "Nyabugogo",
+    "destination": "Rubavu",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "07:00",
+    "durationMins": 182,
+    "price": 4000,
+    "takenSeats": [
+      "S28",
+      "S31",
+      "S34"
+    ]
+  },
+  {
+    "id": "r116",
+    "origin": "Nyabugogo",
+    "destination": "Rubavu",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "09:30",
+    "durationMins": 183,
+    "price": 3800,
+    "takenSeats": [
+      "S9",
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r117",
+    "origin": "Nyabugogo",
+    "destination": "Rubavu",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "13:15",
+    "durationMins": 184,
+    "price": 4100,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r118",
+    "origin": "Nyabugogo",
+    "destination": "Rubavu",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "18:30",
+    "durationMins": 185,
+    "price": 3900,
+    "takenSeats": []
+  },
+  {
+    "id": "r119",
+    "origin": "Rubavu",
+    "destination": "Nyabugogo",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "10:00",
+    "durationMins": 190,
+    "price": 4100,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r120",
+    "origin": "Rubavu",
+    "destination": "Nyabugogo",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 170,
+    "price": 3900,
+    "takenSeats": []
+  },
+  {
+    "id": "r121",
+    "origin": "Rubavu",
+    "destination": "Nyabugogo",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 171,
+    "price": 4200,
+    "takenSeats": [
+      "S13"
+    ]
+  },
+  {
+    "id": "r122",
+    "origin": "Rubavu",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 172,
+    "price": 4000,
+    "takenSeats": [
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r123",
+    "origin": "Nyabugogo",
+    "destination": "Karongi",
+    "agencyId": "ritco",
+    "busType": "hyundai45",
+    "departureTime": "06:00",
+    "durationMins": 200,
+    "price": 4500,
+    "takenSeats": [
+      "S25",
+      "S28",
+      "S31"
+    ]
+  },
+  {
+    "id": "r124",
+    "origin": "Nyabugogo",
+    "destination": "Karongi",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 201,
+    "price": 4300,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r125",
+    "origin": "Nyabugogo",
+    "destination": "Karongi",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 202,
+    "price": 4100,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r126",
+    "origin": "Nyabugogo",
+    "destination": "Karongi",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 203,
+    "price": 4400,
+    "takenSeats": []
+  },
+  {
+    "id": "r127",
+    "origin": "Karongi",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "hyundai45",
+    "departureTime": "17:45",
+    "durationMins": 203,
+    "price": 4100,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r128",
+    "origin": "Karongi",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "06:45",
+    "durationMins": 204,
+    "price": 4400,
+    "takenSeats": [
+      "S9",
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r129",
+    "origin": "Karongi",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "09:00",
+    "durationMins": 205,
+    "price": 4200,
+    "takenSeats": [
+      "S4",
+      "S7",
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r130",
+    "origin": "Karongi",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "12:30",
+    "durationMins": 185,
+    "price": 4500,
+    "takenSeats": []
+  },
+  {
+    "id": "r131",
+    "origin": "Nyabugogo",
+    "destination": "Rusizi",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "06:45",
+    "durationMins": 241,
+    "price": 5500,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r132",
+    "origin": "Nyabugogo",
+    "destination": "Rusizi",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "09:00",
+    "durationMins": 242,
+    "price": 5300,
+    "takenSeats": [
+      "S22",
+      "S25",
+      "S28"
+    ]
+  },
+  {
+    "id": "r133",
+    "origin": "Nyabugogo",
+    "destination": "Rusizi",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "12:30",
+    "durationMins": 243,
+    "price": 5100,
+    "takenSeats": [
+      "S04",
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r134",
+    "origin": "Rusizi",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "17:00",
+    "durationMins": 247,
+    "price": 5400,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r135",
+    "origin": "Rusizi",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "06:30",
+    "durationMins": 248,
+    "price": 5200,
+    "takenSeats": [
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r136",
+    "origin": "Rusizi",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "08:45",
+    "durationMins": 249,
+    "price": 5500,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r137",
+    "origin": "Nyabugogo",
+    "destination": "Gisenyi",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "12:30",
+    "durationMins": 186,
+    "price": 4200,
+    "takenSeats": [
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r138",
+    "origin": "Nyabugogo",
+    "destination": "Gisenyi",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "17:45",
+    "durationMins": 187,
+    "price": 4000,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r139",
+    "origin": "Nyabugogo",
+    "destination": "Gisenyi",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "06:45",
+    "durationMins": 188,
+    "price": 4300,
+    "takenSeats": [
+      "S28",
+      "S31",
+      "S34",
+      "S37"
+    ]
+  },
+  {
+    "id": "r140",
+    "origin": "Nyabugogo",
+    "destination": "Gisenyi",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "09:00",
+    "durationMins": 189,
+    "price": 4100,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r141",
+    "origin": "Nyabugogo",
+    "destination": "Gisenyi",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "12:30",
+    "durationMins": 190,
+    "price": 3900,
+    "takenSeats": []
+  },
+  {
+    "id": "r142",
+    "origin": "Gisenyi",
+    "destination": "Nyabugogo",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "07:15",
+    "durationMins": 181,
+    "price": 4100,
+    "takenSeats": []
+  },
+  {
+    "id": "r143",
+    "origin": "Gisenyi",
+    "destination": "Nyabugogo",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "10:00",
+    "durationMins": 182,
+    "price": 3900,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r144",
+    "origin": "Gisenyi",
+    "destination": "Nyabugogo",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 183,
+    "price": 4200,
+    "takenSeats": [
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r145",
+    "origin": "Gisenyi",
+    "destination": "Nyabugogo",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 184,
+    "price": 4000,
+    "takenSeats": [
+      "S34",
+      "S37",
+      "S40"
+    ]
+  },
+  {
+    "id": "r146",
+    "origin": "Gisenyi",
+    "destination": "Nyabugogo",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 185,
+    "price": 4300,
+    "takenSeats": [
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r147",
+    "origin": "Kimironko",
+    "destination": "Musanze",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "06:00",
+    "durationMins": 96,
+    "price": 2500,
+    "takenSeats": [
+      "S2"
+    ]
+  },
+  {
+    "id": "r148",
+    "origin": "Kimironko",
+    "destination": "Musanze",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "08:00",
+    "durationMins": 97,
+    "price": 2300,
+    "takenSeats": [
+      "S07",
+      "S10"
+    ]
+  },
+  {
+    "id": "r149",
+    "origin": "Kimironko",
+    "destination": "Musanze",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 98,
+    "price": 2100,
+    "takenSeats": [
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r150",
+    "origin": "Kimironko",
+    "destination": "Musanze",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 99,
+    "price": 2400,
+    "takenSeats": [
+      "S25",
+      "S28",
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r151",
+    "origin": "Musanze",
+    "destination": "Kimironko",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 100,
+    "price": 2200,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r152",
+    "origin": "Musanze",
+    "destination": "Kimironko",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 101,
+    "price": 2500,
+    "takenSeats": []
+  },
+  {
+    "id": "r153",
+    "origin": "Musanze",
+    "destination": "Kimironko",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 102,
+    "price": 2300,
+    "takenSeats": [
+      "S31"
+    ]
+  },
+  {
+    "id": "r154",
+    "origin": "Musanze",
+    "destination": "Kimironko",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 103,
+    "price": 2100,
+    "takenSeats": [
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r155",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "16:15",
+    "durationMins": 54,
+    "price": 1100,
+    "takenSeats": [
+      "S22",
+      "S25",
+      "S28"
+    ]
+  },
+  {
+    "id": "r156",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "06:15",
+    "durationMins": 55,
+    "price": 1400,
+    "takenSeats": [
+      "S25",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r157",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "08:15",
+    "durationMins": 56,
+    "price": 1200,
+    "takenSeats": [
+      "S2",
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r158",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 57,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r159",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 58,
+    "price": 1300,
+    "takenSeats": [
+      "S24"
+    ]
+  },
+  {
+    "id": "r160",
+    "origin": "Kimironko",
+    "destination": "Rwamagana",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 59,
+    "price": 1100,
+    "takenSeats": [
+      "S25",
+      "S28"
+    ]
+  },
+  {
+    "id": "r161",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 48,
+    "price": 1100,
+    "takenSeats": [
+      "S37",
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r162",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 49,
+    "price": 1400,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r163",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "12:00",
+    "durationMins": 50,
+    "price": 1200,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r164",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 51,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r165",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 52,
+    "price": 1300,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r166",
+    "origin": "Rwamagana",
+    "destination": "Kimironko",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 53,
+    "price": 1100,
+    "takenSeats": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r167",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "09:00",
+    "durationMins": 149,
+    "price": 3600,
+    "takenSeats": [
+      "S12"
+    ]
+  },
+  {
+    "id": "r168",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "12:30",
+    "durationMins": 150,
+    "price": 3400,
+    "takenSeats": [
+      "S22",
+      "S25"
+    ]
+  },
+  {
+    "id": "r169",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "17:45",
+    "durationMins": 151,
+    "price": 3200,
+    "takenSeats": [
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r170",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "06:45",
+    "durationMins": 152,
+    "price": 3500,
+    "takenSeats": [
+      "S7",
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r171",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "09:00",
+    "durationMins": 153,
+    "price": 3300,
+    "takenSeats": [
+      "S28",
+      "S31",
+      "S34",
+      "S37",
+      "S40"
+    ]
+  },
+  {
+    "id": "r172",
+    "origin": "Kimironko",
+    "destination": "Huye",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "12:30",
+    "durationMins": 154,
+    "price": 3600,
+    "takenSeats": []
+  },
+  {
+    "id": "r173",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 162,
+    "price": 3300,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r174",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 163,
+    "price": 3600,
+    "takenSeats": []
+  },
+  {
+    "id": "r175",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "12:00",
+    "durationMins": 164,
+    "price": 3400,
+    "takenSeats": [
+      "S01"
+    ]
+  },
+  {
+    "id": "r176",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "17:00",
+    "durationMins": 165,
+    "price": 3200,
+    "takenSeats": [
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r177",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "06:30",
+    "durationMins": 145,
+    "price": 3500,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r178",
+    "origin": "Huye",
+    "destination": "Kimironko",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "08:45",
+    "durationMins": 146,
+    "price": 3300,
+    "takenSeats": [
+      "S07",
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r179",
+    "origin": "Kimironko",
+    "destination": "Muhanga",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "06:00",
+    "durationMins": 70,
+    "price": 1200,
+    "takenSeats": [
+      "S01",
+      "S04",
+      "S07"
+    ]
+  },
+  {
+    "id": "r180",
+    "origin": "Kimironko",
+    "destination": "Muhanga",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 71,
+    "price": 1500,
+    "takenSeats": [
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r181",
+    "origin": "Kimironko",
+    "destination": "Muhanga",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 72,
+    "price": 1300,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r182",
+    "origin": "Kimironko",
+    "destination": "Muhanga",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 73,
+    "price": 1600,
+    "takenSeats": []
+  },
+  {
+    "id": "r183",
+    "origin": "Muhanga",
+    "destination": "Kimironko",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 60,
+    "price": 1200,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r184",
+    "origin": "Muhanga",
+    "destination": "Kimironko",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 61,
+    "price": 1500,
+    "takenSeats": []
+  },
+  {
+    "id": "r185",
+    "origin": "Muhanga",
+    "destination": "Kimironko",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 62,
+    "price": 1300,
+    "takenSeats": [
+      "S25"
+    ]
+  },
+  {
+    "id": "r186",
+    "origin": "Muhanga",
+    "destination": "Kimironko",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 63,
+    "price": 1600,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r187",
+    "origin": "Remera",
+    "destination": "Musanze",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "14:00",
+    "durationMins": 120,
+    "price": 2200,
+    "takenSeats": [
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r188",
+    "origin": "Remera",
+    "destination": "Musanze",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "19:15",
+    "durationMins": 100,
+    "price": 2500,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r189",
+    "origin": "Remera",
+    "destination": "Musanze",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "07:15",
+    "durationMins": 101,
+    "price": 2300,
+    "takenSeats": [
+      "S40",
+      "S43",
+      "S01",
+      "S04"
+    ]
+  },
+  {
+    "id": "r190",
+    "origin": "Musanze",
+    "destination": "Remera",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 109,
+    "price": 2300,
+    "takenSeats": []
+  },
+  {
+    "id": "r191",
+    "origin": "Musanze",
+    "destination": "Remera",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 110,
+    "price": 2600,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r192",
+    "origin": "Musanze",
+    "destination": "Remera",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 111,
+    "price": 2400,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r193",
+    "origin": "Remera",
+    "destination": "Rwamagana",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "15:30",
+    "durationMins": 43,
+    "price": 1200,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r194",
+    "origin": "Remera",
+    "destination": "Rwamagana",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "06:00",
+    "durationMins": 44,
+    "price": 1000,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r195",
+    "origin": "Remera",
+    "destination": "Rwamagana",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "08:00",
+    "durationMins": 45,
+    "price": 800,
+    "takenSeats": [
+      "S04",
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r196",
+    "origin": "Remera",
+    "destination": "Rwamagana",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 46,
+    "price": 1100,
+    "takenSeats": [
+      "S22",
+      "S25",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r197",
+    "origin": "Remera",
+    "destination": "Rwamagana",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 47,
+    "price": 900,
+    "takenSeats": []
+  },
+  {
+    "id": "r198",
+    "origin": "Rwamagana",
+    "destination": "Remera",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 55,
+    "price": 1100,
+    "takenSeats": [
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r199",
+    "origin": "Rwamagana",
+    "destination": "Remera",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "10:00",
+    "durationMins": 35,
+    "price": 900,
+    "takenSeats": [
+      "S24",
+      "S27",
+      "S2"
+    ]
+  },
+  {
+    "id": "r200",
+    "origin": "Rwamagana",
+    "destination": "Remera",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "14:00",
+    "durationMins": 36,
+    "price": 1200,
+    "takenSeats": [
+      "S43",
+      "S01",
+      "S04",
+      "S07"
+    ]
+  },
+  {
+    "id": "r201",
+    "origin": "Rwamagana",
+    "destination": "Remera",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 37,
+    "price": 1000,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r202",
+    "origin": "Rwamagana",
+    "destination": "Remera",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 38,
+    "price": 800,
+    "takenSeats": []
+  },
+  {
+    "id": "r203",
+    "origin": "Remera",
+    "destination": "Nyanza",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 100,
+    "price": 2300,
+    "takenSeats": []
+  },
+  {
+    "id": "r204",
+    "origin": "Remera",
+    "destination": "Nyanza",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "06:00",
+    "durationMins": 101,
+    "price": 2100,
+    "takenSeats": [
+      "S12"
+    ]
+  },
+  {
+    "id": "r205",
+    "origin": "Remera",
+    "destination": "Nyanza",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "08:00",
+    "durationMins": 102,
+    "price": 1900,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r206",
+    "origin": "Remera",
+    "destination": "Nyanza",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "11:00",
+    "durationMins": 103,
+    "price": 2200,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r207",
+    "origin": "Remera",
+    "destination": "Nyanza",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "15:30",
+    "durationMins": 104,
+    "price": 2000,
+    "takenSeats": [
+      "S11",
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r208",
+    "origin": "Nyanza",
+    "destination": "Remera",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "11:30",
+    "durationMins": 87,
+    "price": 2200,
+    "takenSeats": [
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r209",
+    "origin": "Nyanza",
+    "destination": "Remera",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "16:15",
+    "durationMins": 88,
+    "price": 2000,
+    "takenSeats": [
+      "S6",
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r210",
+    "origin": "Nyanza",
+    "destination": "Remera",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "06:15",
+    "durationMins": 89,
+    "price": 2300,
+    "takenSeats": [
+      "S28",
+      "S31",
+      "S34",
+      "S37"
+    ]
+  },
+  {
+    "id": "r211",
+    "origin": "Remera",
+    "destination": "Muhanga",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 73,
+    "price": 1400,
+    "takenSeats": [
+      "S21",
+      "S24",
+      "S27",
+      "S2"
+    ]
+  },
+  {
+    "id": "r212",
+    "origin": "Remera",
+    "destination": "Muhanga",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 74,
+    "price": 1700,
+    "takenSeats": [
+      "S34",
+      "S37",
+      "S40",
+      "S43",
+      "S01"
+    ]
+  },
+  {
+    "id": "r213",
+    "origin": "Remera",
+    "destination": "Muhanga",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 75,
+    "price": 1500,
+    "takenSeats": []
+  },
+  {
+    "id": "r214",
+    "origin": "Muhanga",
+    "destination": "Remera",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "11:30",
+    "durationMins": 62,
+    "price": 1600,
+    "takenSeats": [
+      "S25",
+      "S2"
+    ]
+  },
+  {
+    "id": "r215",
+    "origin": "Muhanga",
+    "destination": "Remera",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "16:15",
+    "durationMins": 63,
+    "price": 1400,
+    "takenSeats": [
+      "S6",
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r216",
+    "origin": "Muhanga",
+    "destination": "Remera",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "06:15",
+    "durationMins": 64,
+    "price": 1700,
+    "takenSeats": [
+      "S43",
+      "S01",
+      "S04",
+      "S07"
+    ]
+  },
+  {
+    "id": "r217",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 37,
+    "price": 900,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22",
+      "S25",
+      "S2"
+    ]
+  },
+  {
+    "id": "r218",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 38,
+    "price": 1200,
+    "takenSeats": []
+  },
+  {
+    "id": "r219",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "08:15",
+    "durationMins": 39,
+    "price": 1000,
+    "takenSeats": [
+      "S31"
+    ]
+  },
+  {
+    "id": "r220",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "11:30",
+    "durationMins": 40,
+    "price": 800,
+    "takenSeats": [
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r221",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "16:15",
+    "durationMins": 41,
+    "price": 1100,
+    "takenSeats": [
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r222",
+    "origin": "Muhanga",
+    "destination": "Huye",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "06:15",
+    "durationMins": 42,
+    "price": 900,
+    "takenSeats": [
+      "S37",
+      "S40",
+      "S43",
+      "S01"
+    ]
+  },
+  {
+    "id": "r223",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "13:15",
+    "durationMins": 54,
+    "price": 1000,
+    "takenSeats": [
+      "S20"
+    ]
+  },
+  {
+    "id": "r224",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "18:30",
+    "durationMins": 55,
+    "price": 800,
+    "takenSeats": [
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r225",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 35,
+    "price": 1100,
+    "takenSeats": [
+      "S14",
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r226",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 36,
+    "price": 900,
+    "takenSeats": [
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r227",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 37,
+    "price": 1200,
+    "takenSeats": [
+      "S01",
+      "S04",
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r228",
+    "origin": "Huye",
+    "destination": "Muhanga",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 38,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r229",
+    "origin": "Muhanga",
+    "destination": "Nyanza",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "17:45",
+    "durationMins": 31,
+    "price": 900,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r230",
+    "origin": "Muhanga",
+    "destination": "Nyanza",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "06:45",
+    "durationMins": 32,
+    "price": 700,
+    "takenSeats": []
+  },
+  {
+    "id": "r231",
+    "origin": "Muhanga",
+    "destination": "Nyanza",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "09:00",
+    "durationMins": 33,
+    "price": 500,
+    "takenSeats": [
+      "S34"
+    ]
+  },
+  {
+    "id": "r232",
+    "origin": "Muhanga",
+    "destination": "Nyanza",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "12:30",
+    "durationMins": 34,
+    "price": 800,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r233",
+    "origin": "Nyanza",
+    "destination": "Muhanga",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "10:00",
+    "durationMins": 40,
+    "price": 700,
+    "takenSeats": [
+      "S2",
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r234",
+    "origin": "Nyanza",
+    "destination": "Muhanga",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "14:00",
+    "durationMins": 20,
+    "price": 500,
+    "takenSeats": []
+  },
+  {
+    "id": "r235",
+    "origin": "Nyanza",
+    "destination": "Muhanga",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "19:15",
+    "durationMins": 21,
+    "price": 800,
+    "takenSeats": [
+      "S07"
+    ]
+  },
+  {
+    "id": "r236",
+    "origin": "Nyanza",
+    "destination": "Muhanga",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "07:15",
+    "durationMins": 22,
+    "price": 600,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r237",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 28,
+    "price": 600,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r238",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 29,
+    "price": 900,
+    "takenSeats": [
+      "S17",
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r239",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "12:00",
+    "durationMins": 30,
+    "price": 700,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r240",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 31,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r241",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 32,
+    "price": 800,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r242",
+    "origin": "Huye",
+    "destination": "Nyanza",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 33,
+    "price": 600,
+    "takenSeats": [
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r243",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 37,
+    "price": 700,
+    "takenSeats": [
+      "S07",
+      "S10",
+      "S13"
+    ]
+  },
+  {
+    "id": "r244",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 38,
+    "price": 1000,
+    "takenSeats": [
+      "S5",
+      "S8",
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r245",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "virunga",
+    "busType": "coaster30",
+    "departureTime": "07:00",
+    "durationMins": 39,
+    "price": 800,
+    "takenSeats": [
+      "S26",
+      "S1",
+      "S4",
+      "S7",
+      "S10"
+    ]
+  },
+  {
+    "id": "r246",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "09:30",
+    "durationMins": 40,
+    "price": 600,
+    "takenSeats": []
+  },
+  {
+    "id": "r247",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "13:15",
+    "durationMins": 41,
+    "price": 900,
+    "takenSeats": [
+      "S4"
+    ]
+  },
+  {
+    "id": "r248",
+    "origin": "Nyanza",
+    "destination": "Huye",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "18:30",
+    "durationMins": 42,
+    "price": 700,
+    "takenSeats": [
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r249",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "06:30",
+    "durationMins": 90,
+    "price": 1900,
+    "takenSeats": [
+      "S4"
+    ]
+  },
+  {
+    "id": "r250",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "08:45",
+    "durationMins": 91,
+    "price": 2200,
+    "takenSeats": [
+      "S04",
+      "S07"
+    ]
+  },
+  {
+    "id": "r251",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "12:00",
+    "durationMins": 92,
+    "price": 2000,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r252",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "17:00",
+    "durationMins": 93,
+    "price": 1800,
+    "takenSeats": [
+      "S27",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r253",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "06:30",
+    "durationMins": 94,
+    "price": 2100,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r254",
+    "origin": "Musanze",
+    "destination": "Rubavu",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "08:45",
+    "durationMins": 95,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r255",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 88,
+    "price": 2100,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18",
+      "S21",
+      "S24"
+    ]
+  },
+  {
+    "id": "r256",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 89,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r257",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "virunga",
+    "busType": "hyundai45",
+    "departureTime": "06:00",
+    "durationMins": 90,
+    "price": 2200,
+    "takenSeats": [
+      "S28"
+    ]
+  },
+  {
+    "id": "r258",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "volcano",
+    "busType": "higer26",
+    "departureTime": "08:00",
+    "durationMins": 91,
+    "price": 2000,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r259",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "kivubelt",
+    "busType": "coaster30",
+    "departureTime": "11:00",
+    "durationMins": 92,
+    "price": 1800,
+    "takenSeats": [
+      "S28",
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r260",
+    "origin": "Rubavu",
+    "destination": "Musanze",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 93,
+    "price": 2100,
+    "takenSeats": [
+      "S34",
+      "S37",
+      "S40",
+      "S43"
+    ]
+  },
+  {
+    "id": "r261",
+    "origin": "Musanze",
+    "destination": "Gisenyi",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "11:30",
+    "durationMins": 101,
+    "price": 2300,
+    "takenSeats": [
+      "S17",
+      "S20",
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r262",
+    "origin": "Musanze",
+    "destination": "Gisenyi",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "16:15",
+    "durationMins": 102,
+    "price": 2100,
+    "takenSeats": [
+      "S07",
+      "S10",
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r263",
+    "origin": "Musanze",
+    "destination": "Gisenyi",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "06:15",
+    "durationMins": 103,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r264",
+    "origin": "Gisenyi",
+    "destination": "Musanze",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 94,
+    "price": 2000,
+    "takenSeats": []
+  },
+  {
+    "id": "r265",
+    "origin": "Gisenyi",
+    "destination": "Musanze",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 95,
+    "price": 2300,
+    "takenSeats": [
+      "S2"
+    ]
+  },
+  {
+    "id": "r266",
+    "origin": "Gisenyi",
+    "destination": "Musanze",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 96,
+    "price": 2100,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r267",
+    "origin": "Rwamagana",
+    "destination": "Kayonza",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "06:00",
+    "durationMins": 20,
+    "price": 800,
+    "takenSeats": [
+      "S2"
+    ]
+  },
+  {
+    "id": "r268",
+    "origin": "Rwamagana",
+    "destination": "Kayonza",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "08:00",
+    "durationMins": 20,
+    "price": 600,
+    "takenSeats": [
+      "S37",
+      "S40"
+    ]
+  },
+  {
+    "id": "r269",
+    "origin": "Rwamagana",
+    "destination": "Kayonza",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 20,
+    "price": 500,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r270",
+    "origin": "Rwamagana",
+    "destination": "Kayonza",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 20,
+    "price": 700,
+    "takenSeats": [
+      "S25",
+      "S28",
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r271",
+    "origin": "Kayonza",
+    "destination": "Rwamagana",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "06:00",
+    "durationMins": 20,
+    "price": 500,
+    "takenSeats": [
+      "S2"
+    ]
+  },
+  {
+    "id": "r272",
+    "origin": "Kayonza",
+    "destination": "Rwamagana",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "08:00",
+    "durationMins": 20,
+    "price": 700,
+    "takenSeats": [
+      "S28",
+      "S31"
+    ]
+  },
+  {
+    "id": "r273",
+    "origin": "Kayonza",
+    "destination": "Rwamagana",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "11:00",
+    "durationMins": 20,
+    "price": 500,
+    "takenSeats": [
+      "S10",
+      "S13",
+      "S16"
+    ]
+  },
+  {
+    "id": "r274",
+    "origin": "Kayonza",
+    "destination": "Rwamagana",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "15:30",
+    "durationMins": 20,
+    "price": 800,
+    "takenSeats": [
+      "S25",
+      "S28",
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r275",
+    "origin": "Kayonza",
+    "destination": "Nyagatare",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 74,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r276",
+    "origin": "Kayonza",
+    "destination": "Nyagatare",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 75,
+    "price": 1700,
+    "takenSeats": [
+      "S8"
+    ]
+  },
+  {
+    "id": "r277",
+    "origin": "Kayonza",
+    "destination": "Nyagatare",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 76,
+    "price": 1500,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r278",
+    "origin": "Nyagatare",
+    "destination": "Kayonza",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 68,
+    "price": 1900,
+    "takenSeats": []
+  },
+  {
+    "id": "r279",
+    "origin": "Nyagatare",
+    "destination": "Kayonza",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 69,
+    "price": 1700,
+    "takenSeats": [
+      "S6"
+    ]
+  },
+  {
+    "id": "r280",
+    "origin": "Nyagatare",
+    "destination": "Kayonza",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 70,
+    "price": 1500,
+    "takenSeats": [
+      "S3",
+      "S6"
+    ]
+  },
+  {
+    "id": "r281",
+    "origin": "Rwamagana",
+    "destination": "Kibungo",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 35,
+    "price": 700,
+    "takenSeats": [
+      "S18",
+      "S21",
+      "S24",
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r282",
+    "origin": "Rwamagana",
+    "destination": "Kibungo",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 36,
+    "price": 1000,
+    "takenSeats": []
+  },
+  {
+    "id": "r283",
+    "origin": "Rwamagana",
+    "destination": "Kibungo",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 37,
+    "price": 800,
+    "takenSeats": [
+      "S25"
+    ]
+  },
+  {
+    "id": "r284",
+    "origin": "Rwamagana",
+    "destination": "Kibungo",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 38,
+    "price": 1100,
+    "takenSeats": [
+      "S17",
+      "S20"
+    ]
+  },
+  {
+    "id": "r285",
+    "origin": "Kibungo",
+    "destination": "Rwamagana",
+    "agencyId": "virunga",
+    "busType": "higer26",
+    "departureTime": "07:00",
+    "durationMins": 35,
+    "price": 800,
+    "takenSeats": [
+      "S16",
+      "S19",
+      "S22",
+      "S25",
+      "S2"
+    ]
+  },
+  {
+    "id": "r286",
+    "origin": "Kibungo",
+    "destination": "Rwamagana",
+    "agencyId": "volcano",
+    "busType": "coaster30",
+    "departureTime": "09:30",
+    "durationMins": 36,
+    "price": 1100,
+    "takenSeats": []
+  },
+  {
+    "id": "r287",
+    "origin": "Kibungo",
+    "destination": "Rwamagana",
+    "agencyId": "kivubelt",
+    "busType": "hyundai45",
+    "departureTime": "13:15",
+    "durationMins": 37,
+    "price": 900,
+    "takenSeats": [
+      "S16"
+    ]
+  },
+  {
+    "id": "r288",
+    "origin": "Kibungo",
+    "destination": "Rwamagana",
+    "agencyId": "eastafrica",
+    "busType": "higer26",
+    "departureTime": "18:30",
+    "durationMins": 38,
+    "price": 700,
+    "takenSeats": [
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r289",
+    "origin": "Rubavu",
+    "destination": "Karongi",
+    "agencyId": "ritco",
+    "busType": "hyundai45",
+    "departureTime": "14:45",
+    "durationMins": 100,
+    "price": 2200,
+    "takenSeats": [
+      "S01",
+      "S04",
+      "S07"
+    ]
+  },
+  {
+    "id": "r290",
+    "origin": "Rubavu",
+    "destination": "Karongi",
+    "agencyId": "capital",
+    "busType": "higer26",
+    "departureTime": "05:30",
+    "durationMins": 101,
+    "price": 2500,
+    "takenSeats": [
+      "S25",
+      "S2",
+      "S5",
+      "S8"
+    ]
+  },
+  {
+    "id": "r291",
+    "origin": "Rubavu",
+    "destination": "Karongi",
+    "agencyId": "fidelity",
+    "busType": "coaster30",
+    "departureTime": "07:30",
+    "durationMins": 102,
+    "price": 2300,
+    "takenSeats": [
+      "S28",
+      "S3",
+      "S6",
+      "S9",
+      "S12"
+    ]
+  },
+  {
+    "id": "r292",
+    "origin": "Rubavu",
+    "destination": "Karongi",
+    "agencyId": "ruhire",
+    "busType": "hyundai45",
+    "departureTime": "10:15",
+    "durationMins": 103,
+    "price": 2600,
+    "takenSeats": []
+  },
+  {
+    "id": "r293",
+    "origin": "Karongi",
+    "destination": "Rubavu",
+    "agencyId": "ritco",
+    "busType": "coaster30",
+    "departureTime": "12:00",
+    "durationMins": 110,
+    "price": 2500,
+    "takenSeats": [
+      "S18"
+    ]
+  },
+  {
+    "id": "r294",
+    "origin": "Karongi",
+    "destination": "Rubavu",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "17:00",
+    "durationMins": 111,
+    "price": 2300,
+    "takenSeats": [
+      "S31",
+      "S34"
+    ]
+  },
+  {
+    "id": "r295",
+    "origin": "Karongi",
+    "destination": "Rubavu",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "06:30",
+    "durationMins": 112,
+    "price": 2600,
+    "takenSeats": [
+      "S12",
+      "S15",
+      "S18"
+    ]
+  },
+  {
+    "id": "r296",
+    "origin": "Karongi",
+    "destination": "Rubavu",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "08:45",
+    "durationMins": 113,
+    "price": 2400,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19",
+      "S22"
+    ]
+  },
+  {
+    "id": "r297",
+    "origin": "Karongi",
+    "destination": "Rusizi",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "11:30",
+    "durationMins": 129,
+    "price": 2700,
+    "takenSeats": []
+  },
+  {
+    "id": "r298",
+    "origin": "Karongi",
+    "destination": "Rusizi",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "16:15",
+    "durationMins": 130,
+    "price": 3000,
+    "takenSeats": [
+      "S14"
+    ]
+  },
+  {
+    "id": "r299",
+    "origin": "Karongi",
+    "destination": "Rusizi",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 131,
+    "price": 2800,
+    "takenSeats": [
+      "S23",
+      "S26"
+    ]
+  },
+  {
+    "id": "r300",
+    "origin": "Rusizi",
+    "destination": "Karongi",
+    "agencyId": "volcano",
+    "busType": "hyundai45",
+    "departureTime": "14:00",
+    "durationMins": 126,
+    "price": 2700,
+    "takenSeats": []
+  },
+  {
+    "id": "r301",
+    "origin": "Rusizi",
+    "destination": "Karongi",
+    "agencyId": "kivubelt",
+    "busType": "higer26",
+    "departureTime": "19:15",
+    "durationMins": 127,
+    "price": 3000,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r302",
+    "origin": "Rusizi",
+    "destination": "Karongi",
+    "agencyId": "eastafrica",
+    "busType": "coaster30",
+    "departureTime": "07:15",
+    "durationMins": 128,
+    "price": 2800,
+    "takenSeats": [
+      "S27",
+      "S2"
+    ]
+  },
+  {
+    "id": "r303",
+    "origin": "Rubavu",
+    "destination": "Rusizi",
+    "agencyId": "capital",
+    "busType": "hyundai45",
+    "departureTime": "06:45",
+    "durationMins": 218,
+    "price": 4800,
+    "takenSeats": []
+  },
+  {
+    "id": "r304",
+    "origin": "Rubavu",
+    "destination": "Rusizi",
+    "agencyId": "fidelity",
+    "busType": "higer26",
+    "departureTime": "09:00",
+    "durationMins": 219,
+    "price": 4600,
+    "takenSeats": [
+      "S10"
+    ]
+  },
+  {
+    "id": "r305",
+    "origin": "Rubavu",
+    "destination": "Rusizi",
+    "agencyId": "ruhire",
+    "busType": "coaster30",
+    "departureTime": "12:30",
+    "durationMins": 220,
+    "price": 4400,
+    "takenSeats": [
+      "S11",
+      "S14"
+    ]
+  },
+  {
+    "id": "r306",
+    "origin": "Rusizi",
+    "destination": "Rubavu",
+    "agencyId": "eastafrica",
+    "busType": "hyundai45",
+    "departureTime": "15:30",
+    "durationMins": 215,
+    "price": 4500,
+    "takenSeats": []
+  },
+  {
+    "id": "r307",
+    "origin": "Rusizi",
+    "destination": "Rubavu",
+    "agencyId": "ritco",
+    "busType": "higer26",
+    "departureTime": "06:00",
+    "durationMins": 216,
+    "price": 4800,
+    "takenSeats": [
+      "S20"
+    ]
+  },
+  {
+    "id": "r308",
+    "origin": "Rusizi",
+    "destination": "Rubavu",
+    "agencyId": "capital",
+    "busType": "coaster30",
+    "departureTime": "08:00",
+    "durationMins": 217,
+    "price": 4600,
+    "takenSeats": [
+      "S1",
+      "S4"
+    ]
+  },
+  {
+    "id": "r309",
+    "origin": "Rusizi",
+    "destination": "Rubavu",
+    "agencyId": "fidelity",
+    "busType": "hyundai45",
+    "departureTime": "11:00",
+    "durationMins": 218,
+    "price": 4400,
+    "takenSeats": [
+      "S13",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "r310",
+    "origin": "Rusizi",
+    "destination": "Rubavu",
+    "agencyId": "ruhire",
+    "busType": "higer26",
+    "departureTime": "15:30",
+    "durationMins": 219,
+    "price": 4700,
+    "takenSeats": [
+      "S19",
+      "S22",
+      "S25",
+      "S2"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "coaster30": {
+    "label": "Toyota Coaster",
+    "layoutType": "minibus",
+    "seatCount": 28,
+    "rows": 7,
+    "rearBench": 6,
+    "vipSeats": ["S1", "S2"],
+    "amenities": ["AC", "Radio"]
+  },
+  "hyundai45": {
+    "label": "Hyundai Universe",
+    "layoutType": "coach",
+    "seatCount": 45,
+    "rows": 10,
+    "rearBench": 5,
+    "vipSeats": ["S01", "S02", "S03", "S04"],
+    "amenities": ["AC", "WiFi", "Reclining seats", "Charging ports"]
+  },
+  "higer26": {
+    "label": "Higer City Bus",
+    "layoutType": "citybus",
+    "seatCount": 26,
+    "rows": 6,
+    "rearBench": 2,
+    "vipSeats": [],
+    "amenities": ["AC", "Standing area"]
+  }
+}
