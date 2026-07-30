@@ -73,6 +73,11 @@ export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverSta
           >
             {agency?.name}
           </span>
+          {agency?.verifiedSince && (
+            <span className="rounded-full bg-gerayo-bg border border-gerayo-border px-2 py-0.5 text-[10px] font-medium text-gerayo-muted">
+              {t('results.verifiedSince', { year: agency.verifiedSince })}
+            </span>
+          )}
         </div>
 
         <button
@@ -86,7 +91,7 @@ export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverSta
         </button>
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-1.5">
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
         <span className="rounded-full bg-gerayo-bg border border-gerayo-border px-2 py-0.5 text-[11px] text-gerayo-muted">
           {bus?.label}
         </span>
@@ -95,6 +100,22 @@ export function ResultCard({ route, onSelectSeats, isActive, onFocus, onHoverSta
             {a}
           </span>
         ))}
+        {agency?.courier && (
+          <span className="rounded-full bg-gerayo-bg border border-gerayo-border px-2 py-0.5 text-[11px] text-gerayo-muted">
+            {t('results.parcelAvailable')}
+          </span>
+        )}
+        {agency?.whatsapp && (
+          <a
+            href={`https://wa.me/${agency.whatsapp.replace(/[^0-9]/g, '')}`}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="ml-auto rounded-full border border-gerayo-border px-2 py-0.5 text-[11px] font-medium text-gerayo-muted hover:text-white hover:border-gerayo-muted"
+          >
+            {t('results.whatsapp')}
+          </a>
+        )}
       </div>
     </div>
   )

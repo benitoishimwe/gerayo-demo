@@ -28,12 +28,13 @@ const TOP_TABS = [
   },
 ]
 
-export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopTab, showTickets = false }) {
+export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopTab, showTickets = false, showSchedules = false }) {
   const { t } = useLanguage()
+  const title = showTickets ? t('header.tickets') : showSchedules ? t('nav.schedules') : 'Gerayo'
   return (
     <div className="flex-shrink-0 border-b border-gerayo-border">
       <div className="flex items-center justify-between px-4 py-3">
-        <span className="text-xl font-bold text-white">{showTickets ? t('header.tickets') : 'Gerayo'}</span>
+        <span className="text-xl font-bold text-white">{title}</span>
 
         <div className="flex items-center gap-2">
           <button
@@ -49,7 +50,7 @@ export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopT
         </div>
       </div>
 
-      {!showTickets && (
+      {!showTickets && !showSchedules && (
         <div className="flex px-4 text-sm font-semibold">
           {TOP_TABS.map((tab) => {
             const isActive = activeTopTab === tab.key

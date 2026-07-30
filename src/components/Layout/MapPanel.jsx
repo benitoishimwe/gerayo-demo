@@ -151,7 +151,7 @@ function MapControls() {
         aria-label={t('map.findMyLocation')}
         onClick={handleLocate}
         disabled={locating}
-        className="hidden md:flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
+        className="hidden lg:flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
       >
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3" />
@@ -165,7 +165,7 @@ function MapControls() {
         aria-label={t('map.findMyLocation')}
         onClick={handleLocate}
         disabled={locating}
-        className="flex md:hidden h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
+        className="flex lg:hidden h-9 w-9 items-center justify-center rounded-xl bg-neutral-900/90 text-white shadow-lg backdrop-blur hover:bg-white/10 disabled:opacity-50"
       >
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3" />

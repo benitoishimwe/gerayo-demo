@@ -6,7 +6,7 @@ export function Modal({ title, onClose, children, wide, sidebar }) {
     return (
       <div className="absolute inset-0 z-[2000] flex items-stretch justify-start bg-black/70 md:bg-transparent md:pointer-events-none">
         <div
-          className="jd-scroll pointer-events-auto flex w-full h-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border md:max-h-[calc(100%-2rem)] md:h-[calc(100%-2rem)] md:w-[420px] md:m-4 md:rounded-2xl"
+          className="jd-scroll pointer-events-auto flex w-full h-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border md:mt-4 md:mx-4 md:mb-0 md:max-h-[calc(100%-279px)] md:h-[calc(100%-279px)] md:w-[420px] md:rounded-2xl"
         >
           <div className="sticky top-0 flex items-center justify-between px-5 py-4 border-b border-gerayo-border bg-gerayo-panel">
             <h2 className="text-lg font-semibold text-gerayo-text">{title}</h2>

@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import agencies from '../../data/agencies.json'
 import seatMaps from '../../data/seatMaps.json'
 import { MapPanel } from '../Layout/MapPanel'
+import { ParcelModal } from '../Parcel/ParcelModal'
 import { useLanguage } from '../../i18n/LanguageContext'
 
 const PEEK = 28
@@ -27,6 +28,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
   const bus = seatMaps[route.busType]
   const arrivalTime = addMinutes(route.departureTime, route.durationMins)
   const scrollRef = useRef(null)
+  const [showParcel, setShowParcel] = useState(false)
 
   useEffect(() => {
     const el = scrollRef.current
@@ -44,7 +46,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
 
   return (
     <div className="fixed inset-0 z-[2000] flex items-end md:items-stretch justify-start bg-black/70 md:bg-transparent md:pointer-events-none">
-      <div className="jd-scroll pointer-events-auto relative flex w-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border h-[100dvh] max-h-[100dvh] rounded-none md:max-h-[calc(100%-2rem)] md:h-[calc(100%-2rem)] md:w-[420px] md:m-4 md:rounded-2xl">
+      <div className="jd-scroll pointer-events-auto relative flex w-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border h-[100dvh] max-h-[100dvh] rounded-none md:mt-4 md:mx-4 md:mb-0 md:max-h-[calc(100%-279px)] md:h-[calc(100%-279px)] md:w-[420px] md:rounded-2xl">
         <div className="absolute md:sticky top-0 inset-x-0 md:inset-x-auto z-20 bg-gerayo-panel md:border-b md:border-gerayo-border">
           <div className="flex items-center gap-2 px-4 py-3">
             <button
@@ -144,6 +146,11 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
             <span className="rounded-md px-2 py-0.5 text-xs font-bold text-white" style={{ background: agency?.color }}>
               {agency?.name}
             </span>
+            {agency?.verifiedSince && (
+              <span className="rounded-full bg-gerayo-bg border border-gerayo-border px-2 py-0.5 text-[11px] font-medium text-gerayo-muted">
+                {t('results.verifiedSince', { year: agency.verifiedSince })}
+              </span>
+            )}
           </div>
 
           <div className="mt-6 border-t border-gerayo-border pt-5">
@@ -175,6 +182,16 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
                     {formatDuration(route.durationMins)}
                   </div>
                 </div>
+                {route.viaStops?.length > 0 && (
+                  <div className="space-y-2 pb-6">
+                    {route.viaStops.map((stop) => (
+                      <div key={stop} className="flex items-center gap-2 text-xs text-gerayo-muted">
+                        <span className="h-1.5 w-1.5 flex-none rounded-full border border-gerayo-muted" />
+                        {t('results.viaStop', { stop })}
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div>
                   <div className="text-xs text-gerayo-muted">{arrivalTime}</div>
                   <div className="text-base font-semibold text-white">{route.destination}</div>
@@ -192,6 +209,38 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
             ))}
           </div>
 
+          {(agency?.whatsapp || agency?.phone) && (
+            <div className="mt-5 flex gap-2">
+              {agency?.phone && (
+                <a
+                  href={`tel:${agency.phone}`}
+                  className="flex-1 rounded-full border border-gerayo-border px-3 py-2 text-center text-xs font-semibold text-gerayo-text hover:border-gerayo-muted"
+                >
+                  {t('results.call')}
+                </a>
+              )}
+              {agency?.whatsapp && (
+                <a
+                  href={`https://wa.me/${agency.whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 rounded-full border border-gerayo-border px-3 py-2 text-center text-xs font-semibold text-gerayo-text hover:border-gerayo-muted"
+                >
+                  {t('results.whatsapp')}
+                </a>
+              )}
+            </div>
+          )}
+
+          {agency?.courier && (
+            <button
+              onClick={() => setShowParcel(true)}
+              className="mt-3 w-full rounded-full border border-dashed border-gerayo-border px-3 py-2 text-xs font-semibold text-gerayo-muted hover:border-gerayo-muted hover:text-white"
+            >
+              {t('parcel.sendOnThisBus')}
+            </button>
+          )}
+
           <div className="mt-6 text-center text-[11px] text-gerayo-muted">
             {t('results.confirmNote')}
           </div>
@@ -207,6 +256,8 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
           </button>
         </div>
       </div>
+
+      {showParcel && <ParcelModal route={route} agency={agency} onClose={() => setShowParcel(false)} />}
     </div>
   )
 }

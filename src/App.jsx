@@ -12,6 +12,7 @@ import { PaymentModal } from './components/Payment/PaymentModal'
 import { WalletTopUpModal } from './components/Wallet/WalletTopUpModal'
 import { AccountModal } from './components/Account/AccountModal'
 import { TicketList } from './components/Ticket/TicketList'
+import { SchedulesView } from './components/Schedules/SchedulesView'
 import { Button } from './components/common/Button'
 import { useSearch } from './hooks/useSearch'
 import { useWallet } from './hooks/useWallet'
@@ -32,6 +33,7 @@ export default function App() {
   const [showWallet, setShowWallet] = useState(false)
   const [showAccount, setShowAccount] = useState(false)
   const [showTickets, setShowTickets] = useState(false)
+  const [showSchedules, setShowSchedules] = useState(false)
   const [activeTopTab, setActiveTopTab] = useState('provinces')
   const sidebarRef = useRef(null)
   const [sidebarWidth, setSidebarWidth] = useState(0)
@@ -101,17 +103,20 @@ export default function App() {
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col md:flex-row">
         <div
           ref={sidebarRef}
-          className="pointer-events-auto relative flex h-dvh min-h-0 w-full flex-shrink-0 flex-col overflow-hidden bg-gerayo-bg shadow-2xl md:h-[calc(100%-2rem)] md:w-[420px] md:m-4 md:rounded-2xl md:border md:border-gerayo-border"
+          className="pointer-events-auto relative flex h-dvh min-h-0 w-full flex-shrink-0 flex-col overflow-hidden bg-gerayo-bg shadow-2xl md:mt-4 md:mx-4 md:mb-0 md:h-[calc(100%-279px)] md:w-[420px] md:rounded-2xl md:border md:border-gerayo-border"
         >
-          {!(search.hasSearched && !showTickets) && (
+          {!(search.hasSearched && !showTickets && !showSchedules) && (
             <Header
               onOpenAccount={() => setShowAccount(true)}
               activeTopTab={activeTopTab}
               onChangeTopTab={setActiveTopTab}
               showTickets={showTickets}
+              showSchedules={showSchedules}
             />
           )}
-          {showTickets ? (
+          {showSchedules ? (
+            <SchedulesView />
+          ) : showTickets ? (
             <TicketList tickets={tickets} onPlanJourney={() => setShowTickets(false)} />
           ) : search.hasSearched ? (
             <>
@@ -156,12 +161,12 @@ export default function App() {
               )}
             </>
           )}
-          {!(search.hasSearched && !showTickets) && (
+          {!(search.hasSearched && !showTickets && !showSchedules) && (
             <BottomNav
-              active={showTickets ? 'tickets' : 'trip'}
+              active={showSchedules ? 'schedules' : showTickets ? 'tickets' : 'trip'}
               onChange={(key) => {
-                if (key === 'tickets') setShowTickets(true)
-                else if (key === 'trip') setShowTickets(false)
+                setShowTickets(key === 'tickets')
+                setShowSchedules(key === 'schedules')
               }}
             />
           )}

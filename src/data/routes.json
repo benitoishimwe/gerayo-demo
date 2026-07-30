@@ -4408,5 +4408,152 @@
       "S25",
       "S2"
     ]
+  },
+  {
+    "id": "hz1",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "05:00",
+    "durationMins": 60,
+    "price": 2040,
+    "takenSeats": ["S3", "S9"]
+  },
+  {
+    "id": "hz2",
+    "origin": "Nyabugogo",
+    "destination": "Muhanga",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "12:30",
+    "durationMins": 60,
+    "price": 2040,
+    "takenSeats": []
+  },
+  {
+    "id": "hz3",
+    "origin": "Muhanga",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "07:00",
+    "durationMins": 60,
+    "price": 2040,
+    "takenSeats": ["S12"]
+  },
+  {
+    "id": "hz4",
+    "origin": "Nyabugogo",
+    "destination": "Ruhango",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "05:30",
+    "durationMins": 85,
+    "price": 2950,
+    "takenSeats": ["S6", "S14"]
+  },
+  {
+    "id": "hz5",
+    "origin": "Ruhango",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "13:45",
+    "durationMins": 85,
+    "price": 2950,
+    "takenSeats": []
+  },
+  {
+    "id": "hz6",
+    "origin": "Nyabugogo",
+    "destination": "Nyanza",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "06:15",
+    "durationMins": 105,
+    "price": 3664,
+    "takenSeats": ["S4", "S8", "S18"]
+  },
+  {
+    "id": "hz7",
+    "origin": "Nyanza",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "14:30",
+    "durationMins": 105,
+    "price": 3664,
+    "takenSeats": []
+  },
+  {
+    "id": "hz8",
+    "origin": "Nyabugogo",
+    "destination": "Nyamagabe",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "06:45",
+    "durationMins": 135,
+    "price": 4912,
+    "takenSeats": ["S5", "S11"],
+    "viaStops": ["Nyanza", "Kibeho"]
+  },
+  {
+    "id": "hz9",
+    "origin": "Nyamagabe",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "15:00",
+    "durationMins": 135,
+    "price": 4912,
+    "takenSeats": [],
+    "viaStops": ["Kibeho", "Nyanza"]
+  },
+  {
+    "id": "hz10",
+    "origin": "Nyabugogo",
+    "destination": "Nyaruguru",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "07:30",
+    "durationMins": 150,
+    "price": 5200,
+    "takenSeats": ["S9"],
+    "viaStops": ["Nyanza", "Kibeho", "Ndago", "Munini", "Kamira"]
+  },
+  {
+    "id": "hz11",
+    "origin": "Nyaruguru",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "16:00",
+    "durationMins": 150,
+    "price": 5200,
+    "takenSeats": [],
+    "viaStops": ["Kamira", "Munini", "Ndago", "Kibeho", "Nyanza"]
+  },
+  {
+    "id": "hz12",
+    "origin": "Nyabugogo",
+    "destination": "Huye",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "08:00",
+    "durationMins": 145,
+    "price": 5068,
+    "takenSeats": ["S2", "S7", "S16"]
+  },
+  {
+    "id": "hz13",
+    "origin": "Huye",
+    "destination": "Nyabugogo",
+    "agencyId": "horizon",
+    "busType": "coaster30",
+    "departureTime": "16:30",
+    "durationMins": 145,
+    "price": 5068,
+    "takenSeats": []
   }
 ]

@@ -1,4 +1,14 @@
 [
+  {
+    "id": "horizon",
+    "name": "Horizon Express",
+    "color": "#0f766e",
+    "verifiedSince": 2006,
+    "phone": "+250784041036",
+    "whatsapp": "+250784041036",
+    "courier": true,
+    "courierBrand": "Horizontal Ltd"
+  },
   { "id": "volcano", "name": "Volcano Express", "color": "#16a34a" },
   { "id": "ritco", "name": "RITCO", "color": "#2563eb" },
   { "id": "ruhire", "name": "Ruhire Express", "color": "#f59e0b" },
