@@ -104,7 +104,7 @@ export function SeatModal({ route, onClose, onConfirm }) {
         )}
       </div>
 
-      <div className="sticky bottom-0 -mx-5 mt-5 border-t border-gerayo-border bg-gerayo-panel px-5 pt-4">
+      <div className="sticky -bottom-5 -mx-5 -mb-5 mt-5 border-t border-gerayo-border bg-gerayo-panel px-5 pt-4 pb-5">
         <div className="flex items-center justify-between text-white">
           <span className="text-sm text-gerayo-muted">
             {selectedSeats.length > 0
@@ -114,7 +114,7 @@ export function SeatModal({ route, onClose, onConfirm }) {
           <span className="text-lg font-semibold">{total.toLocaleString()} RWF</span>
         </div>
 
-        <div className="mb-1 mt-3 flex gap-3">
+        <div className="mt-3 flex gap-3">
           <Button variant="secondary" onClick={onClose}>
             {t('common.cancel')}
           </Button>

@@ -103,7 +103,7 @@ export default function App() {
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col md:flex-row">
         <div
           ref={sidebarRef}
-          className="pointer-events-auto relative flex h-dvh min-h-0 w-full flex-shrink-0 flex-col overflow-hidden bg-gerayo-bg shadow-2xl md:mt-4 md:mx-4 md:mb-0 md:h-[calc(100%-279px)] md:w-[420px] md:rounded-2xl md:border md:border-gerayo-border"
+          className="pointer-events-auto relative flex h-dvh min-h-0 w-full flex-shrink-0 flex-col overflow-hidden bg-gerayo-bg shadow-2xl md:m-4 md:h-[calc(100%-2rem)] md:w-[420px] md:rounded-2xl md:border md:border-gerayo-border xl:mb-0 xl:h-[calc(100%-279px)]"
         >
           {!(search.hasSearched && !showTickets && !showSchedules) && (
             <Header

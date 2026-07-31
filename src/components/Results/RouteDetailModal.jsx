@@ -46,7 +46,7 @@ export function RouteDetailModal({ route, onClose, onSelectSeats }) {
 
   return (
     <div className="fixed inset-0 z-[2000] flex items-end md:items-stretch justify-start bg-black/70 md:bg-transparent md:pointer-events-none">
-      <div className="jd-scroll pointer-events-auto relative flex w-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border h-[100dvh] max-h-[100dvh] rounded-none md:mt-4 md:mx-4 md:mb-0 md:max-h-[calc(100%-279px)] md:h-[calc(100%-279px)] md:w-[420px] md:rounded-2xl">
+      <div className="jd-scroll pointer-events-auto relative flex w-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border h-[100dvh] max-h-[100dvh] rounded-none md:m-4 md:max-h-[calc(100%-2rem)] md:h-[calc(100%-2rem)] md:w-[420px] md:rounded-2xl xl:mb-0 xl:max-h-[calc(100%-279px)] xl:h-[calc(100%-279px)]">
         <div className="absolute md:sticky top-0 inset-x-0 md:inset-x-auto z-20 bg-gerayo-panel md:border-b md:border-gerayo-border">
           <div className="flex items-center gap-2 px-4 py-3">
             <button
