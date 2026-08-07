@@ -1,0 +1,5 @@
+[
+  { "id": "tg1", "origin": "Nyabugogo", "destination": "Remera", "fare": 300, "plate": "RAD 812 B" },
+  { "id": "tg2", "origin": "Nyabugogo", "destination": "Kimironko", "fare": 350, "plate": "RAD 470 C" },
+  { "id": "tg3", "origin": "Remera", "destination": "Kimironko", "fare": 250, "plate": "RAD 233 D" }
+]

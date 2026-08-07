@@ -28,7 +28,7 @@ const TOP_TABS = [
   },
 ]
 
-export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopTab, showTickets = false, showSchedules = false }) {
+export function Header({ onOpenAccount, onOpenTapGo, activeTopTab = 'provinces', onChangeTopTab, showTickets = false, showSchedules = false }) {
   const { t } = useLanguage()
   const title = showTickets ? t('header.tickets') : showSchedules ? t('nav.schedules') : 'Gerayo'
   return (
@@ -37,6 +37,17 @@ export function Header({ onOpenAccount, activeTopTab = 'provinces', onChangeTopT
         <span className="text-xl font-bold text-white">{title}</span>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={onOpenTapGo}
+            aria-label={t('tapgo.navLabel')}
+            className="flex h-9 items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-600 to-lime-500 px-3 text-xs font-bold text-black hover:brightness-110 transition"
+          >
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+              <rect x="2" y="6" width="20" height="14" rx="2" stroke="black" strokeWidth="1.8" />
+              <path d="M6 2v4M12 1v6M18 2v4" stroke="black" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            {t('tapgo.navLabel')}
+          </button>
           <button
             onClick={onOpenAccount}
             aria-label={t('header.account')}

@@ -13,6 +13,7 @@ import { WalletTopUpModal } from './components/Wallet/WalletTopUpModal'
 import { AccountModal } from './components/Account/AccountModal'
 import { TicketList } from './components/Ticket/TicketList'
 import { SchedulesView } from './components/Schedules/SchedulesView'
+import { TapGoModal } from './components/TapGo/TapGoModal'
 import { Button } from './components/common/Button'
 import { useSearch } from './hooks/useSearch'
 import { useWallet } from './hooks/useWallet'
@@ -34,6 +35,7 @@ export default function App() {
   const [showAccount, setShowAccount] = useState(false)
   const [showTickets, setShowTickets] = useState(false)
   const [showSchedules, setShowSchedules] = useState(false)
+  const [showTapGo, setShowTapGo] = useState(false)
   const [activeTopTab, setActiveTopTab] = useState('provinces')
   const sidebarRef = useRef(null)
   const [sidebarWidth, setSidebarWidth] = useState(0)
@@ -108,6 +110,7 @@ export default function App() {
           {!(search.hasSearched && !showTickets && !showSchedules) && (
             <Header
               onOpenAccount={() => setShowAccount(true)}
+              onOpenTapGo={() => setShowTapGo(true)}
               activeTopTab={activeTopTab}
               onChangeTopTab={setActiveTopTab}
               showTickets={showTickets}
@@ -199,6 +202,8 @@ export default function App() {
           }}
         />
       )}
+
+      {showTapGo && <TapGoModal onClose={() => setShowTapGo(false)} />}
 
       {showAccount && (
         <AccountModal
