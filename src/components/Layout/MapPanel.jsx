@@ -4,6 +4,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import coords from '../../data/coords.json'
 import { nearestTown } from '../../utils/geo'
+import { findStopByName } from '../../utils/kigaliJourney'
 import { useLanguage } from '../../i18n/LanguageContext'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
@@ -29,12 +30,18 @@ function pinIcon(color) {
 
 const startIcon = pinIcon('#3b82f6')
 const endIcon = pinIcon('#22c55e')
+const stopIcon = pinIcon('#9ca3af')
+
+function kigaliStopPoint(name) {
+  const stop = findStopByName(name)
+  return stop ? [stop.lat, stop.lng] : null
+}
 
 // Fallback width for the floating sidebar panel that sits on top of the map
 // on desktop, used only until the real panel width has been measured.
 const SIDEBAR_OCCLUSION_FALLBACK = 470
 
-function FitBounds({ points, sidebarWidth }) {
+function FitBounds({ points, sidebarWidth, singleZoom = 8 }) {
   const map = useMap()
   useEffect(() => {
     const isDesktop = window.matchMedia('(min-width: 768px)').matches
@@ -47,12 +54,12 @@ function FitBounds({ points, sidebarWidth }) {
       })
     } else {
       const target = points[0] || KIGALI
-      map.setView(target, 8)
+      map.setView(target, singleZoom)
       if (isDesktop) {
         map.panBy([-(leftPad - 60) / 2, 0], { animate: false })
       }
     }
-  }, [points, map, sidebarWidth])
+  }, [points, map, sidebarWidth, singleZoom])
   return null
 }
 
@@ -91,7 +98,50 @@ function RoutePolyline({ origin, destination }) {
 
   if (!path) return null
 
-  return <Polyline positions={path} pathOptions={{ color: '#22c55e', weight: 4 }} />
+  return <Polyline positions={path} pathOptions={{ color: '#22c55e', weight: 4 }} interactive={false} />
+}
+
+function RouteMultiPolyline({ points }) {
+  const [path, setPath] = useState(null)
+  const key = points.map((p) => p.join(',')).join(';')
+
+  useEffect(() => {
+    let cancelled = false
+    setPath(null)
+
+    if (points.length < 2) return undefined
+
+    const coordsParam = points.map(([lat, lng]) => `${lng},${lat}`).join(';')
+    const url = `https://routing.openstreetmap.de/routed-car/route/v1/driving/${coordsParam}?overview=full&geometries=geojson`
+
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error(`routing request failed: ${res.status}`)
+        return res.json()
+      })
+      .then((data) => {
+        if (cancelled) return
+        const coordsGeo = data?.routes?.[0]?.geometry?.coordinates
+        if (coordsGeo?.length) {
+          setPath(coordsGeo.map(([lng, lat]) => [lat, lng]))
+        } else {
+          setPath(points)
+        }
+      })
+      .catch((err) => {
+        console.error('Route fetch failed, falling back to straight line:', err)
+        if (!cancelled) setPath(points)
+      })
+
+    return () => {
+      cancelled = true
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key])
+
+  if (!path) return null
+
+  return <Polyline positions={path} pathOptions={{ color: '#22c55e', weight: 4 }} interactive={false} />
 }
 
 function MapClickHandler({ pickMode, onPick }) {
@@ -195,15 +245,34 @@ export function MapPanel({
   onSetDestination,
   sidebarWidth,
   className = '',
+  kigaliMode = false,
+  kigaliRoute = null,
 }) {
   const { t } = useLanguage()
   const originName = selectedRoute ? selectedRoute.origin : origin
   const destName = selectedRoute ? selectedRoute.destination : destination
 
-  const originPoint = originName ? coords[originName] : null
-  const destPoint = destName ? coords[destName] : null
+  const hasKigaliRoute = kigaliMode && kigaliRoute && kigaliRoute.length > 0
+  const kigaliRoutePositions = hasKigaliRoute ? kigaliRoute.map((s) => [s.lat, s.lng]) : []
 
-  const points = [originPoint, destPoint].filter(Boolean)
+  const originPoint = originName
+    ? (kigaliMode ? kigaliStopPoint(originName) : coords[originName])
+    : null
+  const destPoint = destName
+    ? (kigaliMode ? kigaliStopPoint(destName) : coords[destName])
+    : null
+
+  const scheduleStopNames = !kigaliMode && selectedRoute?.stops?.length ? selectedRoute.stops : null
+  const scheduleRoutePositions = scheduleStopNames
+    ? scheduleStopNames.map((name) => coords[name]).filter(Boolean)
+    : []
+  const hasScheduleRoute = scheduleRoutePositions.length > 1
+
+  const points = hasKigaliRoute
+    ? kigaliRoutePositions
+    : hasScheduleRoute
+      ? scheduleRoutePositions
+      : [originPoint, destPoint].filter(Boolean)
   const fitTarget = points.length > 0 ? points : [KIGALI]
 
   const canPick = !selectedRoute && (onSetOrigin || onSetDestination)
@@ -234,28 +303,76 @@ export function MapPanel({
           url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
           attribution="&copy; OpenStreetMap contributors &copy; CARTO"
         />
-        <FitBounds points={fitTarget} sidebarWidth={sidebarWidth} />
+        <FitBounds points={fitTarget} sidebarWidth={sidebarWidth} singleZoom={kigaliMode ? 14 : 8} />
         {canPick && <MapClickHandler pickMode={pickMode} onPick={handlePick} />}
-        {originPoint && (
-          <Marker position={originPoint} icon={startIcon}>
-            <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
-              {t('map.start')}
-              <br />
-              {originName}
-            </Tooltip>
-          </Marker>
-        )}
-        {destPoint && (
-          <Marker position={destPoint} icon={endIcon}>
-            <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
-              {t('map.end')}
-              <br />
-              {destName}
-            </Tooltip>
-          </Marker>
-        )}
-        {selectedRoute && originPoint && destPoint && (
-          <RoutePolyline origin={originPoint} destination={destPoint} />
+        {hasKigaliRoute ? (
+          <>
+            {kigaliRoutePositions.length > 1 && (
+              <RouteMultiPolyline points={kigaliRoutePositions} />
+            )}
+            {kigaliRoute.map((stop, i) => {
+              const isFirst = i === 0
+              const isLast = i === kigaliRoute.length - 1
+              const icon = isFirst ? startIcon : isLast ? endIcon : stopIcon
+              return (
+                <Marker key={stop.id} position={[stop.lat, stop.lng]} icon={icon}>
+                  {(isFirst || isLast) && (
+                    <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
+                      {isFirst ? t('map.start') : t('map.end')}
+                      <br />
+                      {stop.name}
+                    </Tooltip>
+                  )}
+                </Marker>
+              )
+            })}
+          </>
+        ) : hasScheduleRoute ? (
+          <>
+            <RouteMultiPolyline points={scheduleRoutePositions} />
+            {scheduleStopNames.map((name, i) => {
+              const pos = coords[name]
+              if (!pos) return null
+              const isFirst = i === 0
+              const isLast = i === scheduleStopNames.length - 1
+              const icon = isFirst ? startIcon : isLast ? endIcon : stopIcon
+              return (
+                <Marker key={`${name}-${i}`} position={pos} icon={icon}>
+                  {(isFirst || isLast) && (
+                    <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
+                      {isFirst ? t('map.start') : t('map.end')}
+                      <br />
+                      {name}
+                    </Tooltip>
+                  )}
+                </Marker>
+              )
+            })}
+          </>
+        ) : (
+          <>
+            {originPoint && (
+              <Marker position={originPoint} icon={startIcon}>
+                <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
+                  {t('map.start')}
+                  <br />
+                  {originName}
+                </Tooltip>
+              </Marker>
+            )}
+            {destPoint && (
+              <Marker position={destPoint} icon={endIcon}>
+                <Tooltip permanent direction="top" offset={[0, -8]} className="jd-map-label">
+                  {t('map.end')}
+                  <br />
+                  {destName}
+                </Tooltip>
+              </Marker>
+            )}
+            {selectedRoute && originPoint && destPoint && (
+              <RoutePolyline origin={originPoint} destination={destPoint} />
+            )}
+          </>
         )}
         <MapControls />
       </MapContainer>

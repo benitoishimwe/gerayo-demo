@@ -16,5 +16,6 @@
   { "id": "capital", "name": "Capital Express", "color": "#ef4444" },
   { "id": "virunga", "name": "Virunga Express", "color": "#8b5cf6" },
   { "id": "eastafrica", "name": "East Africa Express", "color": "#14b8a6" },
-  { "id": "fidelity", "name": "Fidelity Express", "color": "#f97316" }
+  { "id": "fidelity", "name": "Fidelity Express", "color": "#f97316" },
+  { "id": "kbs", "name": "KBS Ltd", "color": "#059669" }
 ]

@@ -81,7 +81,9 @@ export function PrintTicket({ ticket, agency }) {
             {[
               [t('ticket.print.date'), ticket.date],
               [t('ticket.print.departure'), ticket.departureTime],
-              [t('ticket.print.seats'), ticket.seats.join(', ')],
+              ticket.type === 'kigali'
+                ? [t('ticket.print.line'), ticket.lines.map((l) => l.code).join(' → ')]
+                : [t('ticket.print.seats'), ticket.seats.join(', ')],
               [t('ticket.print.ticketId'), ticket.id],
             ].map(([label, value]) => (
               <tr key={label} style={{ borderTop: '1px solid #eee' }}>

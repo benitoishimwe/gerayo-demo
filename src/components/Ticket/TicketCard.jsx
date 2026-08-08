@@ -50,7 +50,10 @@ export function TicketCard({ ticket }) {
         {ticket.origin} → {ticket.destination}
       </div>
       <div className="mt-1 text-xs text-gerayo-muted">
-        {ticket.date} · {ticket.departureTime} · {t('ticket.seats', { seats: ticket.seats.join(', ') })}
+        {ticket.date} · {ticket.departureTime}
+        {ticket.type === 'kigali'
+          ? ` · ${ticket.lines.map((l) => l.code).join(' → ')}`
+          : ` · ${t('ticket.seats', { seats: ticket.seats.join(', ') })}`}
       </div>
       <div className="mt-1 text-sm font-semibold text-white">{ticket.total.toLocaleString()} RWF</div>
 

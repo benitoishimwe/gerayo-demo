@@ -1,0 +1,16 @@
+[
+  { "id": "nyabugogo-taxi-park", "name": "Nyabugogo Taxi Park", "lat": -1.9346, "lng": 30.0444 },
+  { "id": "sonatube", "name": "Sonatube", "lat": -1.9410, "lng": 30.0620 },
+  { "id": "downtown-cbd", "name": "Downtown (CBD)", "lat": -1.9500, "lng": 30.0600 },
+  { "id": "nyamirambo", "name": "Nyamirambo", "lat": -1.9700, "lng": 30.0350 },
+  { "id": "gikondo", "name": "Gikondo", "lat": -1.9650, "lng": 30.0700 },
+  { "id": "kicukiro-centre", "name": "Kicukiro Centre", "lat": -1.9700, "lng": 30.1050 },
+  { "id": "kacyiru", "name": "Kacyiru", "lat": -1.9500, "lng": 30.0850 },
+  { "id": "zindiro-b", "name": "Zindiro B", "lat": -1.9280, "lng": 30.0850 },
+  { "id": "kwa-mushimire-b", "name": "Kwa Mushimire B", "lat": -1.9310, "lng": 30.0950 },
+  { "id": "isangano-b", "name": "Isangano B", "lat": -1.9350, "lng": 30.1050 },
+  { "id": "marine-b", "name": "Marine B", "lat": -1.9400, "lng": 30.1120 },
+  { "id": "kimironko-terminal", "name": "Kimironko Bus Terminal", "lat": -1.9486, "lng": 30.1206 },
+  { "id": "kimironko-market", "name": "Kimironko Market", "lat": -1.9500, "lng": 30.1230 },
+  { "id": "remera-taxi-park", "name": "Remera Taxi Park", "lat": -1.9526, "lng": 30.1044 }
+]

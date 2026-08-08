@@ -3,11 +3,22 @@ import { useLanguage } from '../../i18n/LanguageContext'
 import routes from '../../data/tapgoRoutes.json'
 import { TapGoHistory } from './TapGoHistory'
 
-export function TapGoCardView({ card, onTopUp, onBoard }) {
+export function TapGoCardView({ card, onTopUp, onBoard, onManageCards }) {
   const { t } = useLanguage()
 
   return (
     <div className="flex flex-col gap-5">
+      <button
+        onClick={onManageCards}
+        className="flex items-center justify-between rounded-xl border border-gerayo-border bg-gerayo-card/60 px-4 py-2.5 text-left text-sm transition hover:bg-white/5"
+      >
+        <span className="text-gerayo-muted">
+          {card.cardLabel || t('tapgo.manageCards')} · <span className="font-mono">{card.cardId}</span>
+          {card.cards.length > 1 && ` (${card.cards.length})`}
+        </span>
+        <span className="font-medium text-gerayo-from">{t('tapgo.manageCards')}</span>
+      </button>
+
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600 via-emerald-500 to-lime-400 p-5 text-black shadow-lg">
         <div className="absolute -right-6 -top-6 h-28 w-28 rounded-full bg-white/15" />
         <div className="absolute -bottom-8 -left-4 h-24 w-24 rounded-full bg-black/10" />

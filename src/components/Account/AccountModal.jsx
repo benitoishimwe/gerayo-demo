@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Modal } from '../common/Modal'
+import { AuthForm } from './AuthForm'
 import { useLanguage, LANGUAGES } from '../../i18n/LanguageContext'
 
 const RowChevron = () => (
@@ -37,10 +38,23 @@ function LinkRow({ icon, label, external, highlight, onClick, href }) {
   )
 }
 
-export function AccountModal({ email, balance, city, onClose, onOpenWallet }) {
+export function AccountModal({ auth, balance, city, onClose, onOpenWallet, startInAuth }) {
   const { t, language, setLanguage } = useLanguage()
   const [langOpen, setLangOpen] = useState(false)
+  const [authOpen, setAuthOpen] = useState(Boolean(startInAuth))
   const currentLanguage = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0]
+
+  useEffect(() => {
+    if (auth.isAuthenticated) setAuthOpen(false)
+  }, [auth.isAuthenticated])
+
+  if (authOpen) {
+    return (
+      <Modal title={t('account.profile')} onClose={() => setAuthOpen(false)} sidebar>
+        <AuthForm auth={auth} subtitle={t('auth.accountPrompt')} />
+      </Modal>
+    )
+  }
 
   return (
     <Modal title={t('account.title')} onClose={onClose} sidebar>
@@ -95,56 +109,51 @@ export function AccountModal({ email, balance, city, onClose, onOpenWallet }) {
       </div>
 
       <h3 className="mt-6 mb-1 text-base font-bold text-white">{t('account.profile')}</h3>
-      <div className="divide-y divide-gerayo-border">
-        <LinkRow
-          icon={
-            <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white">
-              <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                <circle cx="12" cy="9" r="3.2" fill="#f59e0b" />
-                <path d="M5 20c1.6-3.6 4.6-5.4 7-5.4s5.4 1.8 7 5.4" fill="#f59e0b" />
-              </svg>
-            </span>
-          }
-          label={email}
-        />
-      </div>
-
-      <button
-        onClick={onOpenWallet}
-        className="mt-3 flex w-full items-center gap-3 rounded-xl bg-gradient-to-r from-gerayo-card to-gerayo-border border border-gerayo-border px-4 py-3 text-left transition hover:brightness-110"
-      >
-        <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 flex-shrink-0 text-white">
-          <rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M3 10h18" stroke="currentColor" strokeWidth="1.6" />
-          <circle cx="16.5" cy="14" r="1.3" fill="currentColor" />
-        </svg>
-        <div>
-          <div className="text-sm text-gerayo-muted">{t('account.wallet')}</div>
-          <div className="text-xl font-bold text-white">{balance.toLocaleString()} RWF</div>
+      {auth.isAuthenticated ? (
+        <div className="divide-y divide-gerayo-border">
+          <LinkRow
+            icon={
+              <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white">
+                <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                  <circle cx="12" cy="9" r="3.2" fill="#f59e0b" />
+                  <path d="M5 20c1.6-3.6 4.6-5.4 7-5.4s5.4 1.8 7 5.4" fill="#f59e0b" />
+                </svg>
+              </span>
+            }
+            label={auth.user.email}
+          />
+          <LinkRow label={t('auth.logOut')} onClick={auth.logout} />
         </div>
-      </button>
+      ) : (
+        <div className="divide-y divide-gerayo-border">
+          <LinkRow label={t('auth.accountPrompt')} onClick={() => setAuthOpen(true)} />
+        </div>
+      )}
 
-      <h3 className="mt-6 mb-1 text-base font-bold text-white">{t('account.appearance')}</h3>
-      <div className="divide-y divide-gerayo-border">
-        <LinkRow label={t('account.darkMode')} />
-      </div>
+      {auth.isAuthenticated && (
+        <button
+          onClick={onOpenWallet}
+          className="mt-3 flex w-full items-center gap-3 rounded-xl bg-gradient-to-r from-gerayo-card to-gerayo-border border border-gerayo-border px-4 py-3 text-left transition hover:brightness-110"
+        >
+          <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 flex-shrink-0 text-white">
+            <rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.6" />
+            <path d="M3 10h18" stroke="currentColor" strokeWidth="1.6" />
+            <circle cx="16.5" cy="14" r="1.3" fill="currentColor" />
+          </svg>
+          <div>
+            <div className="text-sm text-gerayo-muted">{t('account.wallet')}</div>
+            <div className="text-xl font-bold text-white">{balance.toLocaleString()} RWF</div>
+          </div>
+        </button>
+      )}
 
       <h3 className="mt-6 mb-1 text-base font-bold text-white">{t('account.aboutUs')}</h3>
       <div className="divide-y divide-gerayo-border">
-        <LinkRow label={t('account.contactUs')} />
-        <LinkRow label={t('account.aboutCompany')} external />
-        <LinkRow label={t('account.merch')} external highlight />
-        <LinkRow
-          label="Facebook"
-          external
-          icon={
-            <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded bg-[#1877F2] text-xs font-bold text-white">
-              f
-            </span>
-          }
-        />
+        <LinkRow label={t('account.contactUs')} href="https://www.gerayoapp.com/support.html" external />
+        <LinkRow label={t('account.aboutCompany')} href="https://www.gerayoapp.com/" external />
         <LinkRow
           label="Instagram"
+          href="https://www.instagram.com/gerayoapp/"
           external
           icon={
             <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-500 text-xs text-white">
@@ -154,6 +163,7 @@ export function AccountModal({ email, balance, city, onClose, onOpenWallet }) {
         />
         <LinkRow
           label="TikTok"
+          href="https://www.tiktok.com/@gerayotransportationapp"
           external
           icon={
             <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded bg-black text-xs text-white">
@@ -165,10 +175,8 @@ export function AccountModal({ email, balance, city, onClose, onOpenWallet }) {
 
       <h3 className="mt-6 mb-1 text-base font-bold text-white">{t('account.support')}</h3>
       <div className="divide-y divide-gerayo-border">
-        <LinkRow label={t('account.termsOfService')} external />
-        <LinkRow label={t('account.privacyPolicy')} />
-        <LinkRow label={t('account.additionalLegal')} external />
-        <LinkRow label={t('account.faq')} external />
+        <LinkRow label={t('account.termsOfService')} href="https://www.gerayoapp.com/terms.html" external />
+        <LinkRow label={t('account.privacyPolicy')} href="https://www.gerayoapp.com/privacy.html" external />
       </div>
 
       <div className="mt-6 pb-1 text-xs text-gerayo-muted">

@@ -7,7 +7,7 @@ import { useLanguage } from '../../i18n/LanguageContext'
 
 const PROMO_CODES = { GERAYO10: 0.1 }
 
-export function PaymentModal({ total, balance, onClose, onOpenTopUp, onPaid }) {
+export function PaymentModal({ total, balance, tapgoBalance = 0, onClose, onOpenTopUp, onPaid }) {
   const { t } = useLanguage()
   const [step, setStep] = useState('select')
   const [method, setMethod] = useState(null)
@@ -29,7 +29,7 @@ export function PaymentModal({ total, balance, onClose, onOpenTopUp, onPaid }) {
 
   const startPayment = () => {
     if (!method) return
-    if (method === 'wallet') {
+    if (method === 'wallet' || method === 'tapgo') {
       finishPayment()
     } else {
       setStep('pin')
@@ -105,7 +105,7 @@ export function PaymentModal({ total, balance, onClose, onOpenTopUp, onPaid }) {
       <div className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-gerayo-muted">
         {t('payment.selectMethod')}
       </div>
-      <PaymentMethodList selected={method} onSelect={setMethod} balance={balance} total={discountedTotal} />
+      <PaymentMethodList selected={method} onSelect={setMethod} balance={balance} tapgoBalance={tapgoBalance} total={discountedTotal} />
 
       {method === 'wallet' && balance < discountedTotal && (
         <Button variant="secondary" className="mt-3" onClick={onOpenTopUp}>
@@ -128,7 +128,11 @@ export function PaymentModal({ total, balance, onClose, onOpenTopUp, onPaid }) {
 
       <div className="sticky bottom-0 -mx-5 mt-5 border-t border-gerayo-border bg-gerayo-panel px-5 pt-4 pb-1">
         <Button
-          disabled={!method || (method === 'wallet' && balance < discountedTotal)}
+          disabled={
+            !method ||
+            (method === 'wallet' && balance < discountedTotal) ||
+            (method === 'tapgo' && tapgoBalance < discountedTotal)
+          }
           onClick={startPayment}
           className="bg-gerayo-to text-white hover:brightness-110 disabled:bg-gerayo-to/40"
         >
