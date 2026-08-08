@@ -4,6 +4,8 @@ import agencies from '../../data/agencies.json'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { RouteStopCombobox } from './RouteStopCombobox'
 import { abbreviateTown } from '../../data/townAbbreviations'
+import { MapPanel } from '../Layout/MapPanel'
+import { DraggableSheet } from '../Layout/DraggableSheet'
 
 function agencyOf(id) {
   return agencies.find((a) => a.id === id)
@@ -66,12 +68,12 @@ export function SchedulesView({ onPreviewRoute, onOpenDetail }) {
   if (selectedGroup) {
     const [origin, destination] = selectedGroup.key.split(' → ')
     const stops = selectedGroup.stops || [origin, destination]
-    return (
-      <div className="jd-scroll flex-1 overflow-y-auto p-4">
+    const detailContent = (
+      <>
         <button
           type="button"
           onClick={closeGroup}
-          className="mb-4 flex items-center gap-2 text-sm text-gerayo-muted hover:text-white"
+          className="mb-4 hidden items-center gap-2 text-sm text-gerayo-muted hover:text-white md:flex"
         >
           <span aria-hidden="true">←</span>
           {t('schedules.backToRoutes') || 'Back'}
@@ -117,6 +119,31 @@ export function SchedulesView({ onPreviewRoute, onOpenDetail }) {
             )
           })}
         </div>
+      </>
+    )
+
+    return (
+      <div className="jd-scroll flex-1 overflow-y-auto md:p-4">
+        <DraggableSheet
+          className="md:hidden"
+          mapContent={
+            <>
+              <MapPanel selectedRoute={{ origin, destination, stops }} className="h-full w-full" />
+              <button
+                type="button"
+                onClick={closeGroup}
+                aria-label={t('schedules.backToRoutes') || 'Back'}
+                className="absolute left-3 top-3 z-[1100] flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900/90 text-white shadow-lg backdrop-blur"
+              >
+                ←
+              </button>
+            </>
+          }
+        >
+          <div className="p-4 pt-0">{detailContent}</div>
+        </DraggableSheet>
+
+        <div className="hidden md:block">{detailContent}</div>
       </div>
     )
   }

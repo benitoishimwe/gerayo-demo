@@ -46,6 +46,7 @@ export default function App() {
   const [kigaliPreviewItinerary, setKigaliPreviewItinerary] = useState(null)
   const [kigaliPreviewLine, setKigaliPreviewLine] = useState(null)
   const [schedulesPreviewRoute, setSchedulesPreviewRoute] = useState(null)
+  const [kigaliLineDetailOpen, setKigaliLineDetailOpen] = useState(false)
   const [kigaliBooking, setKigaliBooking] = useState(null) // { ticketId, total }
   const [showWallet, setShowWallet] = useState(false)
   const [showAccount, setShowAccount] = useState(false)
@@ -168,17 +169,19 @@ export default function App() {
           className="pointer-events-auto relative flex h-dvh min-h-0 w-full flex-shrink-0 flex-col overflow-hidden bg-gerayo-bg shadow-2xl md:m-4 md:h-[calc(100%-2rem)] md:w-[420px] md:rounded-2xl md:border md:border-gerayo-border xl:mb-0 xl:h-[calc(100%-279px)]"
         >
           {!(hasSearched && !showTickets && !showSchedules) && (
-            <Header
-              onOpenAccount={() => setShowAccount(true)}
-              activeTopTab={activeTopTab}
-              onChangeTopTab={setActiveTopTab}
-              showTickets={showTickets}
-              showSchedules={showSchedules}
-            />
+            <div className={kigaliLineDetailOpen ? 'hidden md:block' : ''}>
+              <Header
+                onOpenAccount={() => setShowAccount(true)}
+                activeTopTab={activeTopTab}
+                onChangeTopTab={setActiveTopTab}
+                showTickets={showTickets}
+                showSchedules={showSchedules}
+              />
+            </div>
           )}
           {showSchedules ? (
             isKigali ? (
-              <KigaliSchedulesView onPreviewLine={setKigaliPreviewLine} />
+              <KigaliSchedulesView onPreviewLine={setKigaliPreviewLine} onDetailOpenChange={setKigaliLineDetailOpen} />
             ) : (
               <SchedulesView onPreviewRoute={setSchedulesPreviewRoute} onOpenDetail={setDetailRoute} />
             )

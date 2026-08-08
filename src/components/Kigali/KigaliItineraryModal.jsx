@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import agencies from '../../data/agencies.json'
-import { toTimeString, findStopById } from '../../utils/kigaliJourney'
+import { toTimeString, findStopById, getItineraryStopPositions } from '../../utils/kigaliJourney'
+import { MapPanel } from '../Layout/MapPanel'
 import { useLanguage } from '../../i18n/LanguageContext'
+
+const PEEK = 28
 
 function nowMinutes() {
   const d = new Date()
@@ -42,17 +45,28 @@ function BusBadge({ leg }) {
 export function KigaliItineraryModal({ itinerary, onClose, onBuy }) {
   const { t } = useLanguage()
   const [expandedLeg, setExpandedLeg] = useState(null)
+  const scrollRef = useRef(null)
 
   const busLegs = itinerary.legs.filter((l) => l.kind === 'bus')
   const originStop = busLegs[0].boardStop
   const destStop = busLegs[busLegs.length - 1].alightStop
+  const kigaliRoute = getItineraryStopPositions(itinerary)
 
   const minutesUntil = Math.max(0, Math.round(itinerary.departAt - nowMinutes()))
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const raf = requestAnimationFrame(() => {
+      el.scrollLeft = Math.max(el.clientWidth - 2 * PEEK, 0)
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [])
 
   return (
     <div className="fixed inset-0 z-[2000] flex items-end md:items-stretch justify-start bg-black/70 md:bg-transparent md:pointer-events-none">
       <div className="jd-scroll pointer-events-auto relative flex w-full flex-col overflow-hidden bg-gerayo-panel border border-gerayo-border h-[100dvh] max-h-[100dvh] rounded-none md:m-4 md:max-h-[calc(100%-2rem)] md:h-[calc(100%-2rem)] md:w-[420px] md:rounded-2xl xl:mb-0 xl:max-h-[calc(100%-279px)] xl:h-[calc(100%-279px)]">
-        <div className="sticky top-0 inset-x-0 z-20 bg-gerayo-panel border-b border-gerayo-border">
+        <div className="absolute md:sticky top-0 inset-x-0 md:inset-x-auto z-20 bg-gerayo-panel md:border-b md:border-gerayo-border">
           <div className="flex items-center gap-2 px-4 py-3">
             <button
               onClick={onClose}
@@ -100,7 +114,14 @@ export function KigaliItineraryModal({ itinerary, onClose, onBuy }) {
           </div>
         </div>
 
-        <div className="jd-scroll flex-1 overflow-y-auto p-5">
+        <div
+          ref={scrollRef}
+          className="jd-scroll absolute inset-0 md:relative flex min-h-0 flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden md:block md:overflow-y-auto md:snap-none"
+        >
+          <div className="relative h-full w-[calc(100%-28px)] flex-none snap-start md:hidden">
+            <MapPanel kigaliMode kigaliRoute={kigaliRoute} className="h-full w-full" />
+          </div>
+          <div className="jd-scroll h-full w-[calc(100%-28px)] flex-none snap-start overflow-y-auto p-5 pt-52 pb-5 md:w-auto md:overflow-visible md:snap-none md:pt-5">
           <div className="relative">
             {itinerary.legs.map((leg, i) => {
               if (leg.kind === 'walk') {
@@ -194,12 +215,13 @@ export function KigaliItineraryModal({ itinerary, onClose, onBuy }) {
           <div className="mt-2 text-xs text-gerayo-muted">
             {originStop.name} → {destStop.name}
           </div>
+          </div>
         </div>
 
-        <div className="flex-shrink-0 border-t border-gerayo-border p-3">
+        <div className="absolute md:relative bottom-0 inset-x-0 z-20 flex justify-end md:border-t md:border-gerayo-border bg-gradient-to-t from-black/70 to-transparent md:bg-none md:bg-gerayo-panel p-3">
           <button
             onClick={() => onBuy(itinerary)}
-            className="w-full rounded-full bg-gerayo-from px-4 py-3 text-sm font-semibold text-black shadow-lg transition hover:brightness-110"
+            className="rounded-full bg-gerayo-from px-4 py-2 text-xs font-semibold text-black shadow-lg transition hover:brightness-110"
           >
             {t('kigaliSearch.buyTicket', { price: itinerary.fare.toLocaleString() })}
           </button>

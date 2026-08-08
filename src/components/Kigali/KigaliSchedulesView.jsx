@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import lines from '../../data/kigaliLines.json'
 import agencies from '../../data/agencies.json'
-import { findStopById } from '../../utils/kigaliJourney'
+import { findStopById, getLineStopPositions } from '../../utils/kigaliJourney'
 import { useLanguage } from '../../i18n/LanguageContext'
+import { MapPanel } from '../Layout/MapPanel'
+import { DraggableSheet } from '../Layout/DraggableSheet'
 
 const DAY_TYPES = ['weekday', 'saturday', 'sunday']
 
@@ -10,7 +12,7 @@ function agencyOf(id) {
   return agencies.find((a) => a.id === id)
 }
 
-export function KigaliSchedulesView({ onPreviewLine }) {
+export function KigaliSchedulesView({ onPreviewLine, onDetailOpenChange }) {
   const { t } = useLanguage()
   const [query, setQuery] = useState('')
   const [openLineId, setOpenLineId] = useState(null)
@@ -35,17 +37,22 @@ export function KigaliSchedulesView({ onPreviewLine }) {
     return () => onPreviewLine?.(null)
   }, [openLine])
 
+  useEffect(() => {
+    onDetailOpenChange?.(!!openLine)
+    return () => onDetailOpenChange?.(false)
+  }, [openLine])
+
   if (openLine) {
     const agency = agencyOf(openLine.agencyId)
     const firstStop = findStopById(openLine.stops[0])
     const lastStop = findStopById(openLine.stops[openLine.stops.length - 1])
 
-    return (
-      <div className="jd-scroll flex-1 overflow-y-auto p-4">
+    const detailContent = (
+      <>
         <button
           type="button"
           onClick={() => setOpenLineId(null)}
-          className="mb-4 flex items-center gap-1.5 text-sm text-gerayo-muted hover:text-white transition"
+          className="mb-4 hidden items-center gap-1.5 text-sm text-gerayo-muted hover:text-white transition md:flex"
         >
           ← {t('common.back')}
         </button>
@@ -120,6 +127,31 @@ export function KigaliSchedulesView({ onPreviewLine }) {
             </div>
           </>
         )}
+      </>
+    )
+
+    return (
+      <div className="jd-scroll flex-1 overflow-y-auto md:p-4">
+        <DraggableSheet
+          className="md:hidden"
+          mapContent={
+            <>
+              <MapPanel kigaliMode kigaliRoute={getLineStopPositions(openLine)} className="h-full w-full" />
+              <button
+                type="button"
+                onClick={() => setOpenLineId(null)}
+                aria-label={t('common.back')}
+                className="absolute left-3 top-3 z-[1100] flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900/90 text-white shadow-lg backdrop-blur"
+              >
+                ←
+              </button>
+            </>
+          }
+        >
+          <div className="p-4 pt-0">{detailContent}</div>
+        </DraggableSheet>
+
+        <div className="hidden md:block">{detailContent}</div>
       </div>
     )
   }
